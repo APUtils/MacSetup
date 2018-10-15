@@ -29,19 +29,7 @@ final class ___FILEBASENAME___: UIViewController, InstantiatableFromStoryboard {
         
     }
     
-    // ******************************* MARK: - Configuration
-    
-    private func configure() {
-        
-    }
-    
-    // ******************************* MARK: - UIViewController Overrides
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        configure()
-    }
+    // ******************************* MARK: - UIViewController Methods
     
     // ******************************* MARK: - Actions
     
