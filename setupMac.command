@@ -17,3 +17,7 @@ cp -R "Templates/Custom/" "$templates_folder"
 echo "Setup Xcode color scheme"
 xcode_themes_folder=~/Library/Developer/Xcode/UserData/FontAndColorThemes/
 cp -R "FontAndColorThemes/" "$xcode_themes_folder"
+
+# TODO: Xcode aliases
+# TODO: Terminal aliases
+# TODO: Hotkeys
