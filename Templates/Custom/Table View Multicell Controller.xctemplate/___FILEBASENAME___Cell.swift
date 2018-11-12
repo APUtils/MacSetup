@@ -11,7 +11,7 @@ import APExtensions
 import BaseClasses
 
 
-class ___FILEBASENAME___: TableViewCell {
+final class ___FILEBASENAME___: TableViewCell {
     
     // ******************************* MARK: - @IBOutlets
     

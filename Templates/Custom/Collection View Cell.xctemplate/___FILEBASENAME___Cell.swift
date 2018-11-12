@@ -10,7 +10,7 @@ import UIKit
 import BaseClasses
 
 
-class ___FILEBASENAME___: CollectionViewCell {
+final class ___FILEBASENAME___: CollectionViewCell {
     
     // ******************************* MARK: - @IBOutlets
     

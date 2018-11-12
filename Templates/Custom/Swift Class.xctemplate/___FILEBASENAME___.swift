@@ -11,6 +11,6 @@ import Foundation
 import APExtensions
 
 
-class ___FILEBASENAME___ {
+final class ___FILEBASENAME___ {
     
 }

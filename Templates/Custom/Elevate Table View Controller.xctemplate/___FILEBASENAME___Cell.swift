@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ___FILEBASENAME___: UITableViewCell {
+final class ___FILEBASENAME___: UITableViewCell {
     
     // ******************************* MARK: - @IBOutlets
     

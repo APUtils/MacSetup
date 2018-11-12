@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ___FILEBASENAME___: UIView, InstantiatableFromXib {
+final class ___FILEBASENAME___: UIView, InstantiatableFromXib {
     
     // ******************************* MARK: - @IBOutlets
     
