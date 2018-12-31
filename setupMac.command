@@ -6,18 +6,27 @@ cd "$base_dir"
 echo "Setuping Mac for development..."
 
 echo "Setup keyboard..."
-keyboard_folder=~/Library/Keyboard\ Layouts/
-cp -R "Keyboard Layouts/" "$keyboard_folder"
+folder=~/Library/Keyboard\ Layouts/
+cp -R "Keyboard Layouts/" "$folder"
 
 echo "Setup templates..."
-templates_folder=~/Library/Developer/Xcode/Templates/Custom
-rm -rf "$templates_folder"
-cp -R "Templates/Custom/" "$templates_folder"
+folder=~/Library/Developer/Xcode/Templates/Custom
+rm -rf "$folder"
+cp -R "Templates/Custom/" "$folder"
 
-echo "Setup Xcode color scheme..."
-xcode_themes_folder=~/Library/Developer/Xcode/UserData/FontAndColorThemes/
-cp -R "FontAndColorThemes/" "$xcode_themes_folder"
+echo "Setup Xcode color schemes..."
+folder=~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+cp -R "FontAndColorThemes/" "$folder"
 
-# TODO: Xcode aliases
+echo "Setup Xcode snippets..."
+folder=~/Library/Developer/Xcode/UserData/CodeSnippets/
+rm -rf "$folder"
+cp -R "CodeSnippets/" "$folder"
+
+echo "Setup Xcode hotkeys..."
+folder=~/Library/Developer/Xcode/UserData/KeyBindings/
+rm -rf "$folder"
+cp -R "KeyBindings/" "$folder"
+
 # TODO: Terminal aliases
-# TODO: Hotkeys
+# TODO: Mac Hotkeys

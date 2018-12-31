@@ -14,6 +14,13 @@ echo "Getting Xcode color scheme..."
 xcode_themes_folder=~/Library/Developer/Xcode/UserData/FontAndColorThemes/
 cp -R "$xcode_themes_folder" "FontAndColorThemes/"
 
-# TODO: Xcode aliases
+echo "Getting Xcode snippets..."
+xcode_themes_folder=~/Library/Developer/Xcode/UserData/CodeSnippets/
+cp -R "$xcode_themes_folder" "CodeSnippets/"
+
+echo "Getting Xcode hotkeys..."
+xcode_themes_folder=~/Library/Developer/Xcode/UserData/KeyBindings/
+cp -R "$xcode_themes_folder" "KeyBindings/"
+
 # TODO: Terminal aliases
-# TODO: Hotkeys
+# TODO: Mac Hotkeys
