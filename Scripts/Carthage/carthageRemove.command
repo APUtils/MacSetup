@@ -55,7 +55,7 @@ if [ -z $framework_name ]; then
 elif [[ $frameworks_list = *$framework_name* ]]; then
     echo ""
     echo "Removing $framework_name from project..."
-    # TODO: Framework might have other framework as dependency
+    # TODO: Framework might have other framework as dependency. See how carthageAdd.rb command was done and improve it.
     ruby Scripts/Carthage/carthageRemove.rb $framework_name
 else
     printf >&2 "\n${red_color}Invalid framework name${no_color}\n\n"
@@ -66,12 +66,6 @@ fi
 echo "Removing $framework_name from Carthage..."
 sed -i '' "/\/$framework_name\"/d" Cartfile
 sed -i '' "/\/$framework_name\"/d" Cartfile.resolved
-
-# Update licenses
-if [ -z Scripts/configureLicenses.command ]; then
-    bash Scripts/configureLicenses.command
-    echo ""
-fi
 
 # Update md5 check sum
 cartSum=`{ cat Cartfile.resolved; xcrun swift -version; } | md5`

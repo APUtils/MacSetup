@@ -29,13 +29,6 @@ if [ -z "$project_path" ]; then
 fi
 
 echo "Updating project scripts..."
-find "Scripts" -not -path '*/\.*' -type f -print0 | while read -d $'\0' base_script_path; do
-    base_script_filename=$(basename "$base_script_path")
-
-    find "$project_path" -name "$base_script_filename" -not -path '*/\.*' -not -path "*/Carthage/Build/*" -not -path "*/Carthage/Checkouts/*" -type f -print0 | while read -d $'\0' project_script_path; do
-        cp -R "$base_script_path" "$project_script_path"
-        echo "Updated $base_script_filename"
-    done
-done
+cp -R "Scripts" "$project_path"
 
 printf >&2 "\n${bold_text}SUCCESSFULLY UPDATED SCRIPTS${normal_text}\n\n"

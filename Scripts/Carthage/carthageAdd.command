@@ -15,6 +15,20 @@ normal_text=$(tput sgr0)
 # Any subsequent(*) commands which fail will cause the shell script to exit immediately
 set -e
 
+preserveCartfiles() {
+    previous_cartfile=`cat "Cartfile"`
+    previous_cartfile_resolved=`cat "Cartfile.resolved" 2>/dev/null || true`
+    trap "restoreCartfiles" ERR
+    trap "restoreCartfiles" INT
+}
+
+restoreCartfiles() {
+    echo "$previous_cartfile" > "Cartfile"
+    echo "$previous_cartfile_resolved" > "Cartfile.resolved"
+    trap '' ERR
+    trap '' INT
+}
+
 # Assume scripts are placed in /Scripts/Cocoapods dir
 base_dir=$(dirname "$0")
 cd "$base_dir"
@@ -52,35 +66,48 @@ echo ""
 
 framework_name="$(echo $github_framework | cut -s -d/ -f2)"
 
-if [ ! -z $framework_name ]; then
-    # Add new framework entry
-    # TODO: Need to handle case when there is no separator
-    script_separator="### SCRIPT SEPARATOR DO NOT EDIT ###"
-    line_to_add="github \"$github_framework\""
-    if [ ! -z $git_mark ]; then
-        line_to_add="$line_to_add \"$git_mark\""
-    fi
-    sed -i '' "s|$script_separator|$line_to_add"'\
-'"$script_separator|" Cartfile
-
-    # Sorting list
-    separator_line=$(grep -n "$script_separator" Cartfile | cut -d: -f1)
-    (head -n $(expr $separator_line - 1) | sort -fu) < Cartfile 1<> Cartfile
-
-    # Clone and build
-    bash Scripts/Carthage/carthageUpdate.command $framework_name
-
-    # Update project
-    # TODO: Framework name might differ from github name. Need to check checkouted project and get scheme name from that in future
-    # TODO: Framework might have other framework as dependency
-    ruby Scripts/Carthage/carthageAdd.rb $framework_name
-
-    # Commit all changes
-    echo "Commiting..."
-    git add -A && git commit -m "Added $github_framework framework" > /dev/null
-
-    printf >&2 "\n${bold_text}SUCCESSFULLY ADDED FRAMEWORK${normal_text}\n\n"
-else
+if [ -z $framework_name ]; then
     printf >&2 "\n${red_color}Invalid framework name${no_color}\n\n"
     exit 1
 fi
+
+# Assure Cartfile and Cartfile.resolved won't change if error occur
+preserveCartfiles
+
+# Add new framework entry
+script_separator="### SCRIPT SEPARATOR DO NOT EDIT ###"
+line_to_add="github \"$github_framework\""
+if [ ! -z $git_mark ]; then
+    line_to_add="$line_to_add \"$git_mark\""
+fi
+
+# Check if separator exists
+if grep -q "$script_separator" "Cartfile"; then
+    # Separator exists
+    sed -i '' "s|$script_separator|$line_to_add"'\
+    '"$script_separator|" "Cartfile"
+
+    # Sorting list
+    separator_line=$(grep -n "$script_separator" "Cartfile" | cut -d: -f1)
+    (head -n $(expr $separator_line - 1) | sort -fu) < "Cartfile" 1<> "Cartfile"
+else
+    # Separator doesn't exist
+    printf "\n$line_to_add" >> "Cartfile"
+    sort -u "Cartfile" -o "Cartfile"
+    sed -i '' '/^$/d' "Cartfile"
+fi
+
+# Clone and build
+bash Scripts/Carthage/carthageUpdate.command $framework_name
+
+# Update project
+ruby "Scripts/Carthage/carthageAdd.rb" $framework_name
+
+# Commit all changes
+echo "Commiting..."
+git add -A && git commit -m "Added $github_framework framework" > /dev/null
+
+printf >&2 "\n${bold_text}SUCCESSFULLY ADDED FRAMEWORK${normal_text}\n\n"
+
+trap '' ERR
+trap '' INT
