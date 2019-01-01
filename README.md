@@ -26,16 +26,24 @@ Sets framework search path for Carthage frameworks if it wasn't set yet.
 
 ## Xcode: YOUR_PROJECT/Frameworks/_Carthage/carthageAdd.command
 
-Execute `updateProject.command` first. Just right click on a command a select `Open with External Editor` then follow instructions to add new framework.
+Execute `updateProject.command` first and `carthageSetup.command` after. Just right click on a command a select `Open with External Editor` then follow instructions to add new framework.
 
 ## Xcode: YOUR_PROJECT/Frameworks/_Carthage/carthageRemove.command
 
-Execute `updateProject.command` first. Just right click on a command a select `Open with External Editor` then follow instructions to remove existing framework.
+Execute `updateProject.command` first and `carthageSetup.command` after. Just right click on a command a select `Open with External Editor` then follow instructions to remove existing framework.
 
 ## Xcode: YOUR_PROJECT/Frameworks/_Carthage/carthageUpdate.command
 
-Execute `updateProject.command` first. Just right click on a command a select `Open with External Editor` then follow instructions to update existing framework.
+Execute `updateProject.command` first and `carthageSetup.command` after. Just right click on a command a select `Open with External Editor` then follow instructions to update existing framework.
 
-## YOUR_PROJECT/Scripts/Cocoapods/podSetup.command
+## Finder: YOUR_PROJECT/Scripts/Cocoapods/podSetup.command
 
 Execute `updateProject.command` first. Tries to update Podfile so after first run of `YOUR_PROJECT/Scripts/Cocoapods/podInstall.command` or `YOUR_PROJECT/Scripts/Cocoapods/podUpdate.command` those files will be attached to Pods project for easy access.
+
+## Xcode: PODS_PROJECT/podInstall.command
+
+Execute `updateProject.command` first and `podSetup.command` after. Add new cocoapods framework into `Podfile` then right click on a command a select `Open with External Editor` to perform pods installation.
+
+## Xcode: PODS_PROJECT/podUpdate.command
+
+Execute `updateProject.command` first and `podSetup.command` after. Just right click on a command a select `Open with External Editor` then follow instructions to update existing framework.
