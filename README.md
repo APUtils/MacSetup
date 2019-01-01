@@ -1,3 +1,5 @@
+# **!!! PLEASE COMMIT YOUR CHANGES BEFORE STARTING TO USE ANY OF THOSE SCRIPTS !!!**
+
 # Overview
 
 Helpful collection of shell scripts to keep different Macs development environments in sync.

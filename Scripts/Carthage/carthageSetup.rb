@@ -25,20 +25,25 @@ def setupTarget(target)
     
     # Carthage Install
     puts "Updating 'Carthage Install' build phase...".blue
-    if !target.shell_script_build_phases.any? { |x| x.name == "Carthage Install" }
-        carthge_install_build_phase = target.new_shell_script_build_phase("Carthage Install")
-        carthge_install_build_phase.shell_path = '/bin/bash'
-        carthge_install_build_phase.shell_script = "source ~/.bash_profile\nenv -i GITHUB_ACCESS_TOKEN=\"$GITHUB_ACCESS_TOKEN\" DEVELOPER_DIR=\"$DEVELOPER_DIR\" PATH=\"$PATH\" bash \"Scripts/Carthage/carthageInstall.command\"\n"
-        target.build_phases.move(carthge_install_build_phase, 0)
+    carthage_install_build_phase = target.shell_script_build_phases.detect { |x| x.name == "Carthage Install" || x.shell_script.include?("carthageInstall.command") }
+    if !carthage_install_build_phase
+        carthage_install_build_phase = target.new_shell_script_build_phase("Carthage Install")
     end
+    carthage_install_build_phase.name = "Carthage Install"
+    carthage_install_build_phase.shell_path = '/bin/bash'
+    carthage_install_build_phase.shell_script = "source ~/.bash_profile\nenv -i GITHUB_ACCESS_TOKEN=\"$GITHUB_ACCESS_TOKEN\" DEVELOPER_DIR=\"$DEVELOPER_DIR\" PATH=\"$PATH\" bash \"Scripts/Carthage/carthageInstall.command\"\n"
+    target.build_phases.move(carthage_install_build_phase, 0)
+    
     
     # Carthage Copy
     puts "Updating 'Carthage Copy' build phase...".blue
-    if !target.shell_script_build_phases.any? { |x| x.name == "Carthage Copy" }
+    carthge_copy_build_phase = target.shell_script_build_phases.detect { |x| x.name == "Carthage Copy" || x.shell_script.include?("/usr/local/bin/carthage copy-frameworks") }
+    if !carthge_copy_build_phase
         carthge_copy_build_phase = target.new_shell_script_build_phase("Carthage Copy")
-        carthge_copy_build_phase.shell_path = '/bin/sh'
-        carthge_copy_build_phase.shell_script = "/usr/local/bin/carthage copy-frameworks\n"
     end
+    carthge_copy_build_phase.name = "Carthage Copy"
+    carthge_copy_build_phase.shell_path = '/bin/sh'
+    carthge_copy_build_phase.shell_script = "/usr/local/bin/carthage copy-frameworks\n"
 end
 
 # Colorization

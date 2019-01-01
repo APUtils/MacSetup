@@ -23,11 +23,16 @@ cd ..
 cd ..
 
 # Project Update
+touch Cartfile
 ruby "Scripts/Carthage/carthageSetup.rb"
 
 # .gitignore Update
 printf >&2 "${blue_color}Updating .gitignore...${no_color}\n"
-grep -q -F "/Carthage/" ".gitignore" || echo "/Carthage/" >> ".gitignore"
+if ! grep -q -F "Carthage/" ".gitignore"; then
+    printf "\n/Carthage/\n" >> ".gitignore"
+elif ! grep -q -F "/Carthage/" ".gitignore"; then
+    sed -i '' 's/Carthage\//\/Carthage\//g' ".gitignore"
+fi
 
 # Success
 printf >&2 "\n${bold_text}PROJECT SETUP SUCCESS${normal_text}\n\n"

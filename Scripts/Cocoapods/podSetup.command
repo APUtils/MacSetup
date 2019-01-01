@@ -39,7 +39,11 @@ fi
 
 # .gitignore Update
 printf >&2 "${blue_color}Updating .gitignore...${no_color}\n"
-grep -q -F "/Pods/" ".gitignore" || echo "/Pods/" >> ".gitignore"
+if ! grep -q -F "Pods/" ".gitignore"; then
+    printf "\n/Pods/\n" >> ".gitignore"
+elif ! grep -q -F "/Pods/" ".gitignore"; then
+    sed -i '' 's/Pods\//\/Pods\//g' ".gitignore"
+fi
 
 # Success
 printf >&2 "\n${bold_text}PROJECT SETUP SUCCESS${normal_text}\n\n"
