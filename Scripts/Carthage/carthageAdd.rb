@@ -1,10 +1,4 @@
-require 'xcodeproj'
-
-# Input
-def prompt(*args)
-    print(*args)
-    STDIN.gets.strip
-end
+require_relative 'utils.rb'
 
 def addFramework(project, framework_name)
     framework_full_name = framework_name + ".framework"
@@ -46,44 +40,6 @@ def addFramework(project, framework_name)
     end
 end
 
-def getConfigAttributes(framework_target)
-    default_configuration = framework_target.build_configuration_list[framework_target.build_configuration_list.default_configuration_name]
-    base_configuration_reference = default_configuration.base_configuration_reference
-    if !base_configuration_reference&.real_path.to_s.empty?
-        config = Xcodeproj::Config.new(base_configuration_reference.real_path)
-        config.attributes
-    else
-        return nil
-    end
-end
-
-# Colorization
-class String
-    def colorize(color_code)
-        "\e[#{color_code}m#{self}\e[0m"
-    end
-    
-    def red
-        colorize(31)
-    end
-    
-    def green
-        colorize(32)
-    end
-    
-    def yellow
-        colorize(33)
-    end
-    
-    def blue
-        colorize(34)
-    end
-    
-    def light_blue
-        colorize(36)
-    end
-end
-
 framework_name = ARGV[0]
 
 if !framework_name
@@ -97,46 +53,8 @@ end
 project_path = Dir['*.xcodeproj'].first
 project = Xcodeproj::Project.open(project_path)
 
-framework_project_path = Dir['Carthage/Checkouts/' + framework_name + '/*.xcodeproj'].first
 
-if framework_project_path.to_s.empty?
-    abort("\nCan't find framework project\n".red)
-end
-
-framework_shared_schemes = Xcodeproj::Project.schemes(framework_project_path)
-
-# Get proper targets
-framework_project = Xcodeproj::Project.open(framework_project_path)
-framework_targets = framework_project.native_targets.select { |framework_target|
-    isIOS = framework_target.common_resolved_build_setting("SUPPORTED_PLATFORMS")&.include?("iphoneos") || framework_target.platform_name == :ios
-    
-    # Check target configuration file also
-    isIOS = isIOS || getConfigAttributes(framework_target)&.dig("SUPPORTED_PLATFORMS")&.include?("iphoneos")
-    
-    isFramework = framework_target.symbol_type == :framework
-    isShared = framework_shared_schemes.include?(framework_target.name)
-    
-    isIOS && isFramework && isShared
-}
-
-all_framework_names = framework_targets.map { |framework_target|
-    
-    # Check target configuration file first
-    framework_name = getConfigAttributes(framework_target)&.dig("PRODUCT_NAME")&.delete! ';'
-    
-    if framework_name.to_s.empty?
-        framework_name = framework_target.common_resolved_build_setting("PRODUCT_NAME")
-    end
-    
-    if framework_name == '$(TARGET_NAME)'
-        framework_name = framework_target.name
-    end
-    
-    framework_name
-}
-# TODO: Add support for 'c99extidentifier' if needed
-
-
+all_framework_names = getSharediOSFrameworkNames(framework_name)
 if all_framework_names.empty?
     abort("\nFramework wasn't found\n".red)
     
@@ -160,7 +78,9 @@ else
     framework_names.each { |framework_name| addFramework(project, framework_name) }
 end
 
-framework_cartfile = Dir['Carthage/Checkouts/' + framework_name + '/Cartfile'].first
+framework_project_path = getCarthageProjectPath(framework_name)
+project_dir = File.dirname(framework_project_path)
+framework_cartfile = Dir[project_dir + '/Cartfile'].first
 if !framework_cartfile.to_s.empty?
     data = File.read(framework_cartfile)
     unless data.nil?
