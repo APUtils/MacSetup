@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>userDefaultsComputedProperty</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    private let &lt;#name#&gt;UserDefaultsKey = "&lt;#name#&gt;"
+    private var &lt;#name#&gt;: &lt;#Type#&gt; {
+        get {
+            return g_sharedUserDefaults.&lt;#type#&gt;(forKey: &lt;#name#&gt;UserDefaultsKey)
+        }
+        set {
+            guard &lt;#name#&gt; != newValue else { return }
+            
+            g_sharedUserDefaults.set(newValue, forKey: &lt;#name#&gt;UserDefaultsKey)
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1F58FDF6-D137-4517-AF46-E2FC4EC09614</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>User Defaults Computed Property</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>User Defaults Computed Property</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
