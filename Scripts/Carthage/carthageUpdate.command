@@ -37,12 +37,6 @@ echo "Synchronizing Carthage dependencies..."
 carthage update ${framework_name} --platform iOS --cache-builds --use-ssh
 echo ""
 
-# Update licenses
-if [ -z Scripts/configureLicenses.command ]; then
-    bash Scripts/configureLicenses.command
-    echo ""
-fi
-
 # Update md5 check sum
 cartSum=`{ cat Cartfile.resolved; xcrun swift -version; } | md5`
 echo $cartSum > Carthage/cartSum.txt
