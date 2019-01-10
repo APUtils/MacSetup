@@ -85,7 +85,7 @@ fi
 if grep -q "$script_separator" "Cartfile"; then
     # Separator exists
     sed -i '' "s|$script_separator|$line_to_add"'\
-    '"$script_separator|" "Cartfile"
+'"$script_separator|" "Cartfile"
 
     # Sorting list
     separator_line=$(grep -n "$script_separator" "Cartfile" | cut -d: -f1)
