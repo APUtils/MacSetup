@@ -68,10 +68,10 @@ else
     print "\n"
     print "\n"
     
-    framework_names_string = prompt "Please specify frameworks you want to add separating by space: "
+    framework_names_string = prompt "Please specify frameworks you want to add separating by space (press enter to add all): "
     
     if framework_names_string.to_s.empty?
-        abort("\nFramework name is required\n".red)
+        framework_names_string = all_framework_names.join(" ")
     end
     
     framework_names = framework_names_string.split(" ")
