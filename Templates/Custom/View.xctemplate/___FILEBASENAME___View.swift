@@ -10,7 +10,7 @@ import UIKit
 import APExtensions
 
 
-final class ___FILEBASENAME___: UIView, InstantiatableContentView {
+final class ___FILEBASENAME___: UIView {
     
     // ******************************* MARK: - @IBOutlets
     
@@ -43,3 +43,7 @@ final class ___FILEBASENAME___: UIView, InstantiatableContentView {
     
     // ******************************* MARK: - Private Methods
 }
+
+// ******************************* MARK: - InstantiatableContentView
+
+extension ___FILEBASENAME___: InstantiatableContentView {}

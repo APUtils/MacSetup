@@ -11,7 +11,7 @@ import UIKit
 import APExtensions
 
 
-final class ___FILEBASENAME___: UIViewController, InstantiatableFromStoryboard {
+final class ___FILEBASENAME___: UIViewController {
     
     // ******************************* MARK: - @IBOutlets
     
@@ -29,9 +29,13 @@ final class ___FILEBASENAME___: UIViewController, InstantiatableFromStoryboard {
         
     }
     
-    // ******************************* MARK: - UIViewController Methods
+    // ******************************* MARK: - UIViewController Overrides
     
     // ******************************* MARK: - Actions
     
     // ******************************* MARK: - Notifications
 }
+
+// ******************************* MARK: - ___FILEBASENAME___
+
+extension ___FILEBASENAME___: InstantiatableFromStoryboard {}

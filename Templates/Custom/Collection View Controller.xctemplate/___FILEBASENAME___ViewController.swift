@@ -11,7 +11,7 @@ import UIKit
 import APExtensions
 
 
-final class ___FILEBASENAME___: UIViewController, InstantiatableFromStoryboard {
+final class ___FILEBASENAME___: UIViewController {
     
     // ******************************* MARK: - @IBOutlets
     
@@ -55,6 +55,10 @@ final class ___FILEBASENAME___: UIViewController, InstantiatableFromStoryboard {
     
     // ******************************* MARK: - Notifications
 }
+
+// ******************************* MARK: - InstantiatableFromStoryboard
+
+extension ___FILEBASENAME___: InstantiatableFromStoryboard {}
 
 // ******************************* MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 
