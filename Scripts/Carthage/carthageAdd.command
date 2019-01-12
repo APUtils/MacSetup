@@ -29,7 +29,7 @@ restoreCartfiles() {
     trap '' INT
 }
 
-# Assume scripts are placed in /Scripts/Cocoapods dir
+# Assume scripts are placed in /Scripts/Carthage dir
 base_dir=$(dirname "$0")
 cd "$base_dir"
 cd ..

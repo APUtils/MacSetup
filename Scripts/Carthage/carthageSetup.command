@@ -16,7 +16,7 @@ no_color='\033[0m'
 bold_text=$(tput bold)
 normal_text=$(tput sgr0)
 
-# Assume scripts are placed in /Scripts/Cocoapods dir
+# Assume scripts are placed in /Scripts/Carthage dir
 base_dir=$(dirname "$0")
 cd "$base_dir"
 cd ..
