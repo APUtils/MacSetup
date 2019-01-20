@@ -16,15 +16,16 @@ final class ___FILEBASENAME___: CollectionViewCell {
     
     // ******************************* MARK: - @IBOutlets
     
-    @IBOutlet private weak var <#name#>: <#class#>!
-    @IBOutlet private weak var <#name#>: <#class#>!
-    @IBOutlet private weak var <#name#>: <#class#>!
-    @IBOutlet private weak var <#name#>: <#class#>!
-    @IBOutlet private weak var <#name#>: <#class#>!
+    // TODO:
+//    @IBOutlet private weak var <#name#>: <#class#>!
+//    @IBOutlet private weak var <#name#>: <#class#>!
+//    @IBOutlet private weak var <#name#>: <#class#>!
+//    @IBOutlet private weak var <#name#>: <#class#>!
+//    @IBOutlet private weak var <#name#>: <#class#>!
     
     // ******************************* MARK: - Private Properties
     
-    private let vm: ___VARIABLE_BASENAME___CellViewModel!
+    private var vm: ___VARIABLE_BASENAME___CellViewModel!
     
     // ******************************* MARK: - Initialization and Setup
     
@@ -42,10 +43,11 @@ final class ___FILEBASENAME___: CollectionViewCell {
     func configure(vm: ___VARIABLE_BASENAME___CellViewModel) {
         self.vm = vm
         
-        <#name#>.<#text#> = vm.<#title#>
-        <#name#>.<#text#> = vm.<#title#>
-        <#name#>.<#text#> = vm.<#title#>
-        <#name#>.<#text#> = vm.<#title#>
-        <#name#>.<#text#> = vm.<#title#>
+        // TODO:
+//        <#name#>.<#text#> = vm.<#title#>
+//        <#name#>.<#text#> = vm.<#title#>
+//        <#name#>.<#text#> = vm.<#title#>
+//        <#name#>.<#text#> = vm.<#title#>
+//        <#name#>.<#text#> = vm.<#title#>
     }
 }
