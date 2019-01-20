@@ -25,7 +25,6 @@ final class ___FILEBASENAME___: UIViewController {
     
     override func viewDidLoad() {
         setup()
-        
         super.viewDidLoad()
     }
     
@@ -37,23 +36,10 @@ final class ___FILEBASENAME___: UIViewController {
         tableView.registerNib(class: ___VARIABLE_BASENAME___Cell.self)
     }
     
-    // ******************************* MARK: - Configuration
-    
-    private func configure() {
-        
-    }
-    
     // ******************************* MARK: - UIViewController Overrides
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        configure()
-    }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
-        
         tableView.setEditing(editing, animated: animated)
     }
     

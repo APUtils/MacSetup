@@ -18,6 +18,11 @@ final class ___FILEBASENAME___: UIView {
     
     // ******************************* MARK: - Initialization and Setup
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
+    }
+    
     private func setup() {
         setupContentView()
     }
@@ -25,19 +30,12 @@ final class ___FILEBASENAME___: UIView {
     private func setupContentView() {
         let contentView = createContentView()
         contentView.frame = bounds
-        
         addSubview(contentView)
     }
     
     // ******************************* MARK: - Configuration
     
     // ******************************* MARK: - UIView Overrides
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        setup()
-    }
     
     // ******************************* MARK: - Public Methods
     

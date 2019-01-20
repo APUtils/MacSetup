@@ -21,7 +21,6 @@ final class ___FILEBASENAME___: UIViewController {
     
     override func viewDidLoad() {
         setup()
-        
         super.viewDidLoad()
     }
     

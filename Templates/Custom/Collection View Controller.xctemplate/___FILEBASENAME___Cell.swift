@@ -19,7 +19,6 @@ final class ___FILEBASENAME___: CollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setup()
     }
     
