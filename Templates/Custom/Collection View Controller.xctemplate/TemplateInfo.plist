@@ -9,7 +9,7 @@
 	<key>Summary</key>
 	<string>Creates ViewController with CollectionView, Cell and CellViewModel classes</string>
 	<key>SortOrder</key>
-	<string>2</string>
+	<string>11</string>
 	<key>AllowedTypes</key>
 	<array>
 		<string>public.swift-source</string>
