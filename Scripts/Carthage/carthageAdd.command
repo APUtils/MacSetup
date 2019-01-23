@@ -12,12 +12,6 @@ no_color='\033[0m'
 bold_text=$(tput bold)
 normal_text=$(tput sgr0)
 
-# Any subsequent(*) commands which fail will cause the shell script to exit immediately
-set -e
-
-# Xcodeproj is required
-hash xcodeproj 2>/dev/null || { printf >&2 "\n${red_color}Xcodeproj is required. Run 'sudo gem install xcodeproj'${no_color}\n\n"; exit 1; }
-
 preserveCartfiles() {
     previous_cartfile=`cat "Cartfile"`
     previous_cartfile_resolved=`cat "Cartfile.resolved" 2>/dev/null || true`
@@ -52,6 +46,9 @@ fi
 # Requires `xcodeproj` installed - https://github.com/CocoaPods/Xcodeproj
 # sudo gem install xcodeproj
 hash xcodeproj 2>/dev/null || { printf >&2 "\n${red_color}Requires xcodeproj installed - 'sudo gem install xcodeproj'${no_color}\n\n"; exit 1; }
+
+# Any subsequent(*) commands which fail will cause the shell script to exit immediately
+set -e
 
 echo ""
 
