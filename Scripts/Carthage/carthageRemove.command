@@ -15,6 +15,9 @@ normal_text=$(tput sgr0)
 # Any subsequent(*) commands which fail will cause the shell script to exit immediately
 set -e
 
+# Xcodeproj is required
+hash xcodeproj 2>/dev/null || { printf >&2 "\n${red_color}Xcodeproj is required. Run 'sudo gem install xcodeproj'${no_color}\n\n"; exit 1; }
+
 # Assume scripts are placed in /Scripts/Carthage dir
 base_dir=$(dirname "$0")
 cd "$base_dir"
