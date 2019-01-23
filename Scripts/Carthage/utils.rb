@@ -1,4 +1,9 @@
-require 'xcodeproj'
+begin
+  require 'xcodeproj'
+rescue LoadError => e
+  raise unless e.message =~ /some_gem/
+  puts 'please install xcodeproj first!'
+end
 
 # Input
 def prompt(*args)
