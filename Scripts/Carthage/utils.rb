@@ -18,6 +18,8 @@ class Xcodeproj::Project::Object::PBXNativeTarget
         # Check target configuration file also
         isIOS = isIOS || getConfigAttributes(self)&.dig("SUPPORTED_PLATFORMS")&.include?("iphoneos")
         
+        # CHECK INCLUDES ALSO OMG WHY?! Defenitelly need to improve xcodeproj to resolve those settings properly. I'm out.
+        
         isFramework = symbol_type == :framework
         isShared = framework_shared_schemes.include?(name)
         
@@ -40,6 +42,11 @@ end
 # Returns shared iOS framework names
 def getSharediOSFrameworkNames(framework_name)
     framework_project_path = getCarthageProjectPath(framework_name)
+    
+    if framework_project_path.to_s.empty?
+        return nil
+    end
+    
     framework_project = Xcodeproj::Project.open(framework_project_path)
     framework_shared_schemes = Xcodeproj::Project.schemes(framework_project_path)
     framework_targets = framework_project.native_targets.select { |framework_target| framework_target.iOSSharedFramework?(framework_shared_schemes) }
@@ -82,6 +89,8 @@ def getCarthageProjectPath(framework_name)
             return framework_project_path
         end
     }
+    
+    return nil
 end
 
 # Colorization

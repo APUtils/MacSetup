@@ -50,13 +50,22 @@ def addFrameworkWithDependenciesToProject(project, framework_name)
     end
     
     all_framework_names = getSharediOSFrameworkNames(framework_name)
-    if all_framework_names.empty?
-        abort("\nFramework wasn't found\n".red)
+    
+    if all_framework_names.to_s.empty?
+        print "\n"
+        framework_names_string = prompt "Unable to automatically locate frameworks. Please specify frameworks you want to add separating by space: "
         
-    elsif all_framework_names.count == 1
+        if framework_names_string.to_s.empty?
+            abort "Framework names are required".red
+        end
+        
+        framework_names = framework_names_string.split(" ")
+        framework_names.each { |framework_name| addFrameworkToProject(project, framework_name) }
+        
+        elsif all_framework_names.count == 1
         addFrameworkToProject(project, all_framework_names.first)
         
-    else
+        else
         print "\n"
         print "Available frameworks:\n"
         print all_framework_names.join("\n").blue
