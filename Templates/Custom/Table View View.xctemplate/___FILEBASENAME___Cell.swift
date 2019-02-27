@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 import APExtensions
 import BaseClasses
 
@@ -25,21 +26,21 @@ final class ___FILEBASENAME___: TableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setup()
     }
     
     private func setup() {
+        
+    }
+    
+    // ******************************* MARK: - Configuration
+    
+    func configure(vm: ___VARIABLE_BASENAME___CellViewModel) {
         // TODO:
 //        <#name#>.<#text#> = vm.<#text#>
 //        <#name#>.<#text#> = vm.<#text#>
 //        <#name#>.<#text#> = vm.<#text#>
 //        <#name#>.<#text#> = vm.<#text#>
     }
-    
-    // ******************************* MARK: - Configuration
-    
-    func configure(vm: ___VARIABLE_BASENAME___CellVM) {
-        
-    }
 }
+

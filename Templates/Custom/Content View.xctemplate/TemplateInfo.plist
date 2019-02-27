@@ -5,11 +5,11 @@
 	<key>Kind</key>
 	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
 	<key>Description</key>
-	<string>View with CollectionView</string>
+	<string>View with contentView xib</string>
 	<key>Summary</key>
-	<string>Creates View with ViewModel, CollectionView, Cell and CellViewModel classes</string>
+	<string>Creates view with contentView in xib</string>
 	<key>SortOrder</key>
-	<string>102</string>
+	<string>4</string>
 	<key>AllowedTypes</key>
 	<array>
 		<string>public.swift-source</string>

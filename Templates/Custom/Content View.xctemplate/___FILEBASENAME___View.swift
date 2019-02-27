@@ -24,7 +24,14 @@ final class ___FILEBASENAME___: UIView {
     }
     
     private func setup() {
-        
+        setupContentView()
+    }
+    
+    private func setupContentView() {
+        let contentView = createContentView()
+        contentView.frame = bounds
+        addSubview(contentView)
+        contentView.constraintSides(to: self)
     }
     
     // ******************************* MARK: - Configuration
@@ -36,6 +43,6 @@ final class ___FILEBASENAME___: UIView {
     // ******************************* MARK: - Private Methods
 }
 
-// ******************************* MARK: - InstantiatableFromXib
+// ******************************* MARK: - InstantiatableContentView
 
-extension ___FILEBASENAME___: InstantiatableFromXib {}
+extension ___FILEBASENAME___: InstantiatableContentView {}

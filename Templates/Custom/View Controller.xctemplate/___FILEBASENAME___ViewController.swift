@@ -35,6 +35,6 @@ final class ___FILEBASENAME___: UIViewController {
     // ******************************* MARK: - Notifications
 }
 
-// ******************************* MARK: - ___FILEBASENAME___
+// ******************************* MARK: - InstantiatableFromStoryboard
 
 extension ___FILEBASENAME___: InstantiatableFromStoryboard {}

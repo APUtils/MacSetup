@@ -39,6 +39,7 @@ final class ___FILEBASENAME___: UIView {
         let contentView = createContentView()
         contentView.frame = bounds
         addSubview(contentView)
+        contentView.constraintSides(to: self)
     }
     
     private func setupCollectionView() {

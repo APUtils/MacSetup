@@ -15,7 +15,7 @@ final class ___FILEBASENAME___: UIView {
     
     // ******************************* MARK: - @IBOutlets
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // ******************************* MARK: - Private Properties
     
@@ -30,7 +30,7 @@ final class ___FILEBASENAME___: UIView {
     
     private func setup() {
         setupContentView()
-        setupCollectionView()
+        setupTableView()
     }
     
     private func setupContentView() {
@@ -40,18 +40,19 @@ final class ___FILEBASENAME___: UIView {
         contentView.constraintSides(to: self)
     }
     
-    private func setupCollectionView() {
-        collectionView.registerNib(cellClass: ___VARIABLE_BASENAME___Cell.self)
+    private func setupTableView() {
+        tableView.registerNib(class: ___VARIABLE_BASENAME___Cell.self)
+        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = UITableView.automaticDimension
     }
-    
-    // ******************************* MARK: - UIView Overrides
     
     // ******************************* MARK: - Configuration
     
     func configure(vm: ___VARIABLE_BASENAME___ViewModel) {
         self.vm = vm
-        collectionView.reloadData()
     }
+    
+    // ******************************* MARK: - UIView Overrides
     
     // ******************************* MARK: - Private Methods
 }
@@ -60,16 +61,20 @@ final class ___FILEBASENAME___: UIView {
 
 extension ___FILEBASENAME___: InstantiatableContentView {}
 
-// ******************************* MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+// ******************************* MARK: - UITableViewDelegate, UITableViewDataSource
 
-extension ___FILEBASENAME___: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension ___FILEBASENAME___: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vm.cellVMs.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ___VARIABLE_BASENAME___Cell = collectionView.dequeueCell(for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ___VARIABLE_BASENAME___Cell = tableView.dequeue(for: indexPath)
         cell.configure(vm: vm.cellVMs[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

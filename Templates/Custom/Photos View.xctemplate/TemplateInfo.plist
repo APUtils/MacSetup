@@ -9,7 +9,7 @@
 	<key>Summary</key>
 	<string>Creates ready to use swipe photos view</string>
 	<key>SortOrder</key>
-	<string>13</string>
+	<string>103</string>
 	<key>AllowedTypes</key>
 	<array>
 		<string>public.swift-source</string>

@@ -9,7 +9,7 @@
 	<key>Summary</key>
 	<string>Creates ViewController with TableView, Cell and CellViewModel classes. Simplifies multiple cell usage.</string>
 	<key>SortOrder</key>
-	<string>2</string>
+	<string>201</string>
 	<key>AllowedTypes</key>
 	<array>
 		<string>public.swift-source</string>

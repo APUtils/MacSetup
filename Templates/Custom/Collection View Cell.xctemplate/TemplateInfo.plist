@@ -9,7 +9,7 @@
 	<key>Summary</key>
 	<string>Creates view cell with xib and ViewModel</string>
 	<key>SortOrder</key>
-	<string>10</string>
+	<string>100</string>
 	<key>AllowedTypes</key>
 	<array>
 		<string>public.swift-source</string>

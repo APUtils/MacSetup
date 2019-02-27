@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="___VARIABLE_BASENAME___View" customModule="___PROJECTNAME___" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="RnB-Gg-t3D" id="6h1-td-rbh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Cly-fC-ONJ" userLabel="Container View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RnB-Gg-t3D" customClass="TableView" customModule="BaseClasses">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="GhS-og-1Ee" userLabel="Bogus Footer">
+                        <rect key="frame" x="0.0" y="828" width="375" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="J1h-ft-KFF"/>
+                        <outlet property="delegate" destination="-1" id="Fxi-5U-7EY"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="RnB-Gg-t3D" firstAttribute="top" secondItem="Cly-fC-ONJ" secondAttribute="top" id="MJK-Ez-2fw"/>
+                <constraint firstAttribute="bottom" secondItem="RnB-Gg-t3D" secondAttribute="bottom" id="Rq6-4l-Bt7"/>
+                <constraint firstItem="RnB-Gg-t3D" firstAttribute="leading" secondItem="Cly-fC-ONJ" secondAttribute="leading" id="cut-oE-mMn"/>
+                <constraint firstAttribute="trailing" secondItem="RnB-Gg-t3D" secondAttribute="trailing" id="xgz-1P-V6v"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="23.199999999999999" y="53.523238380809602"/>
+        </view>
+    </objects>
+</document>

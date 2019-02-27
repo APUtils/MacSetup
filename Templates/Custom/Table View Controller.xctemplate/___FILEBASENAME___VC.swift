@@ -19,7 +19,7 @@ final class ___FILEBASENAME___: UIViewController {
     
     // ******************************* MARK: - Private Properties
     
-    private var viewModels: [___VARIABLE_BASENAME___CellViewModel] = []
+    private var vm: ___VARIABLE_BASENAME___VM!
     
     // ******************************* MARK: - Initialization and Setup
     
@@ -34,6 +34,8 @@ final class ___FILEBASENAME___: UIViewController {
     
     private func setupTableView() {
         tableView.registerNib(class: ___VARIABLE_BASENAME___Cell.self)
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     // ******************************* MARK: - UIViewController Overrides
@@ -50,33 +52,30 @@ final class ___FILEBASENAME___: UIViewController {
 
 // ******************************* MARK: - InstantiatableFromStoryboard
 
-extension ___FILEBASENAME___: InstantiatableFromStoryboard {}
+extension ___FILEBASENAME___: InstantiatableFromStoryboard {
+    static func create(vm: ___VARIABLE_BASENAME___VM) -> Self {
+        let vc = create()
+        vc.vm = vm
+        return vc
+    }
+}
 
 // ******************************* MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension ___FILEBASENAME___: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModels.count
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return viewModels[indexPath.row].cellHeight
+        return vm.cellVMs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = viewModels[indexPath.row]
+        let cellVM = vm.cellVMs[indexPath.row]
         let cell: ___VARIABLE_BASENAME___Cell = tableView.dequeue(for: indexPath)
-        
-        cell.configure(viewModel: viewModel)
-        
+        cell.configure(viewModel: cellVM)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+//        let cellVM = vm.cellVMs[indexPath.row]
     }
 }

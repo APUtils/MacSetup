@@ -34,7 +34,7 @@
                         <outlet property="delegate" destination="-1" id="4gU-Ta-GZ7"/>
                     </connections>
                 </collectionView>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IqK-Ai-tuc">
+                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IqK-Ai-tuc">
                     <rect key="frame" x="8" y="158" width="359" height="37"/>
                 </pageControl>
             </subviews>
