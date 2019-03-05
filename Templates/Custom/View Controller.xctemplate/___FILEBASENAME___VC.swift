@@ -17,6 +17,8 @@ final class ___FILEBASENAME___: UIViewController {
     
     // ******************************* MARK: - Private Properties
     
+    private var vm: ___VARIABLE_BASENAME___VM!
+    
     // ******************************* MARK: - Initialization and Setup
     
     override func viewDidLoad() {
@@ -37,4 +39,10 @@ final class ___FILEBASENAME___: UIViewController {
 
 // ******************************* MARK: - InstantiatableFromStoryboard
 
-extension ___FILEBASENAME___: InstantiatableFromStoryboard {}
+extension ___FILEBASENAME___: InstantiatableFromStoryboard {
+    static func create(vm: ___VARIABLE_BASENAME___VM) -> ___FILEBASENAME___ {
+        let vc = create()
+        vc.vm = vm
+        return vc
+    }
+}

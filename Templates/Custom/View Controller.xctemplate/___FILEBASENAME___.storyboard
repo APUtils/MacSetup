@@ -12,7 +12,7 @@
         <!--___FILEBASENAME___ View Controller-->
         <scene sceneID="XdZ-jQ-xOI">
             <objects>
-                <viewController storyboardIdentifier="___FILEBASENAME___ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Sp-cS-saY" customClass="___FILEBASENAME___ViewController" customModule="___PROJECTNAME___" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="___FILEBASENAME___VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Sp-cS-saY" customClass="___FILEBASENAME___ViewController" customModule="___PROJECTNAME___" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ufL-yt-nao"/>
                         <viewControllerLayoutGuide type="bottom" id="kpT-m8-zGj"/>
