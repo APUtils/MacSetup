@@ -16,12 +16,9 @@ final class ___FILEBASENAME___: UIView {
     
     // ******************************* MARK: - Private Properties
     
-    // ******************************* MARK: - Initialization and Setup
+    private var vm: ___VARIABLE_BASENAME___VM!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setup()
-    }
+    // ******************************* MARK: - Initialization and Setup
     
     private func setup() {
         setupContentView()
@@ -45,4 +42,12 @@ final class ___FILEBASENAME___: UIView {
 
 // ******************************* MARK: - InstantiatableContentView
 
-extension ___FILEBASENAME___: InstantiatableContentView {}
+extension ___FILEBASENAME___: InstantiatableContentView {
+    static func create(vm: ___VARIABLE_BASENAME___VM) -> ___FILEBASENAME___ {
+        let view = create()
+        view.vm = vm
+        view.setup()
+        
+        return view
+    }
+}
