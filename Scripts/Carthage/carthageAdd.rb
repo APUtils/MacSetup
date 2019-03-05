@@ -62,10 +62,10 @@ def addFrameworkWithDependenciesToProject(project, framework_name)
         framework_names = framework_names_string.split(" ")
         framework_names.each { |framework_name| addFrameworkToProject(project, framework_name) }
         
-        elsif all_framework_names.count == 1
+    elsif all_framework_names.count == 1
         addFrameworkToProject(project, all_framework_names.first)
         
-        else
+    else
         print "\n"
         print "Available frameworks:\n"
         print all_framework_names.join("\n").blue
