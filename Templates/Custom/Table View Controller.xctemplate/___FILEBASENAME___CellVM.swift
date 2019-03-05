@@ -10,14 +10,18 @@ import UIKit
 import APExtensions
 
 
-struct ___FILEBASENAME___: TableViewConfigurableCellInformation {
-    
-    // ******************************* MARK: - TableViewCellInformation
-    
-    let cellClass: (UITableViewCell & Configurable).Type = ___VARIABLE_BASENAME___Cell.self
-    let cellHeight: CGFloat = UITableViewAutomaticDimension
+struct ___FILEBASENAME___ {
     
     // ******************************* MARK: - Public Properties
     
+    //    let <#name#>: <#class#>!
+    //    let <#name#>: <#class#>!
+    //    let <#name#>: <#class#>!
+    //    let <#name#>: <#class#>!
     
+    // ******************************* MARK: - Initialization and Setup
+    
+    init() {
+        
+    }
 }
