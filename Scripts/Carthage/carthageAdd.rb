@@ -105,7 +105,11 @@ project = Xcodeproj::Project.open(project_path)
 
 framework_name = ARGV[0]
 
-addFrameworkWithDependenciesToProject(project, framework_name)
+if framework_name.end_with?('.framework')
+    addFrameworkToProject(project, framework_name.gsub('.framework', ''))
+else
+    addFrameworkWithDependenciesToProject(project, framework_name)
+end
 
 # Save
 project.save
