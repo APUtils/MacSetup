@@ -41,6 +41,7 @@ end
 
 # Returns shared iOS framework names
 def getSharediOSFrameworkNames(framework_name)
+    # TODO: Need to handle multiple projects
     framework_project_path = getCarthageProjectPath(framework_name)
     
     if framework_project_path.to_s.empty?
