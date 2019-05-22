@@ -31,7 +31,7 @@ end
 def getConfigAttributes(framework_target)
     default_configuration = framework_target.build_configuration_list[framework_target.build_configuration_list.default_configuration_name]
     base_configuration_reference = default_configuration.base_configuration_reference
-    if !base_configuration_reference&.real_path.to_s.empty?
+    if !base_configuration_reference&.real_path.to_s.empty? && File.file?(base_configuration_reference.real_path)
         config = Xcodeproj::Config.new(base_configuration_reference.real_path)
         config.attributes
     else
