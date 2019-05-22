@@ -13,7 +13,9 @@ cd ..
 
 cart_sum_file="Carthage/cartSumTests.txt"
 
-if [ ! -f $cart_sum_file ]; then
+mkdir -p "Carthage"
+touch "$cart_sum_file"
+if [ ! -f "$cart_sum_file" ]; then
     prevSum="null"
 else
     prevSum=`cat $cart_sum_file`

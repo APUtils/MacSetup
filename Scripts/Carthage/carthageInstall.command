@@ -28,7 +28,9 @@ cd "$base_dir"
 cd ..
 cd ..
 
-if [ ! -f Carthage/cartSum.txt ]; then
+mkdir -p "Carthage"
+touch "Carthage/cartSum.txt"
+if [ ! -f "Carthage/cartSum.txt" ]; then
     prevSum="null";
 else
     prevSum=`cat Carthage/cartSum.txt`;
