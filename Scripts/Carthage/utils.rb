@@ -64,6 +64,8 @@ def getSharediOSFrameworkNames(framework_name)
         elsif framework_name == '$(TARGET_NAME:c99extidentifier)'
             # TODO: Add full support for 'c99extidentifier' if needed
             framework_name = framework_target.name
+        elsif framework_name == '$(PROJECT_NAME)'
+            framework_name = File.basename(framework_project_path, ".*")
         end
         
         framework_name

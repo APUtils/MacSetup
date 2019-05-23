@@ -6,7 +6,7 @@ def addFrameworkToProject(project, framework_name)
     framework_path = "Carthage/Build/iOS/" + framework_full_name
     
     if !File.exist?(framework_path)
-        abort("\nFramework doesn't exist.\n".red)
+        abort("\nFramework '#{framework_name}' doesnot exist at path '#{framework_path}'.\n".red)
     end
     
     # Adding to Frameworks folder and sorting
@@ -88,7 +88,7 @@ def addFrameworkWithDependenciesToProject(project, framework_name)
     framework_cartfile = Dir[project_dir + '/Cartfile'].first
     
     # Handle symlink case
-    if File.symlink?(framework_cartfile)
+    if !framework_names_string.to_s.empty? && File.exist?(framework_cartfile) && File.symlink?(framework_cartfile)
         framework_cartfile = Pathname.new(framework_cartfile).realpath
     end
     
