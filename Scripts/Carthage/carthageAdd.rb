@@ -1,3 +1,4 @@
+require 'pathname'
 require_relative 'utils.rb'
 
 def addFrameworkToProject(project, framework_name)
@@ -85,6 +86,12 @@ def addFrameworkWithDependenciesToProject(project, framework_name)
     framework_project_path = getCarthageProjectPath(framework_name)
     project_dir = File.dirname(framework_project_path)
     framework_cartfile = Dir[project_dir + '/Cartfile'].first
+    
+    # Handle symlink case
+    if File.symlink?(framework_cartfile)
+        framework_cartfile = Pathname.new(framework_cartfile).realpath
+    end
+    
     if !framework_cartfile.to_s.empty?
         data = File.read(framework_cartfile)
         unless data.nil?
