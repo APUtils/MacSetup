@@ -84,6 +84,11 @@ def addFrameworkWithDependenciesToProject(project, framework_name)
     end
     
     framework_project_path = getCarthageProjectPath(framework_name)
+    
+    if framework_project_path.to_s.empty?
+        return
+    end
+    
     project_dir = File.dirname(framework_project_path)
     framework_cartfile = Dir[project_dir + '/Cartfile'].first
     
