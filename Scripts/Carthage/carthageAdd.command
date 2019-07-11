@@ -48,14 +48,6 @@ scripts_dir="Scripts/Carthage"
 github_framework=$1
 git_mark=$2
 
-# TODO: Handle errors and restore Cartfile
-
-# Check if there are uncommited changes
-if [[ -n $(git status -s) ]]; then
-    printf >&2 "\n${red_color}Please commit your changes first${no_color}\n\n"
-    exit 1
-fi
-
 # Requires `xcodeproj` installed - https://github.com/CocoaPods/Xcodeproj
 # sudo gem install xcodeproj
 hash xcodeproj 2>/dev/null || { printf >&2 "\n${red_color}Requires xcodeproj installed - 'sudo gem install xcodeproj'${no_color}\n\n"; exit 1; }
@@ -120,10 +112,6 @@ bash "$scripts_dir/carthageUpdate.command" $framework_name
 
 # Update project
 ruby "$scripts_dir/carthageAdd.rb" $framework_name
-
-# Commit all changes
-echo "Commiting..."
-git add -A && git commit -m "Added $github_framework framework" > /dev/null
 
 printf >&2 "\n${bold_text}SUCCESSFULLY ADDED FRAMEWORK${normal_text}\n\n"
 
