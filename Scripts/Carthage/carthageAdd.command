@@ -82,7 +82,7 @@ preserveCartfiles
 # Add new framework entry
 script_separator="### SCRIPT SEPARATOR DO NOT EDIT ###"
 line_to_add="github \"$github_framework\""
-if [ -n $git_mark ]; then
+if [ -n "$git_mark" ]; then
     line_to_add="$line_to_add \"$git_mark\""
 fi
 
