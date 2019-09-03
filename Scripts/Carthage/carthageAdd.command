@@ -98,7 +98,7 @@ if grep -q "$script_separator" "Cartfile"; then
 else
     # Separator doesn't exist
     printf "\n$line_to_add" >> "Cartfile"
-    sort -u "Cartfile" -o "Cartfile"
+    sort -fu "Cartfile" -o "Cartfile"
     sed -i '' '/^$/d' "Cartfile"
 fi
 
