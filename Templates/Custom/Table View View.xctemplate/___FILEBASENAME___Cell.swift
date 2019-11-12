@@ -16,12 +16,6 @@ final class ___FILEBASENAME___: TableViewCell {
     
     // ******************************* MARK: - @IBOutlets
     
-    // TODO:
-//    @IBOutlet private weak var <#name#>: <#class#>!
-//    @IBOutlet private weak var <#name#>: <#class#>!
-//    @IBOutlet private weak var <#name#>: <#class#>!
-//    @IBOutlet private weak var <#name#>: <#class#>!
-    
     // ******************************* MARK: - Initialization and Setup
     
     override func awakeFromNib() {
@@ -36,11 +30,7 @@ final class ___FILEBASENAME___: TableViewCell {
     // ******************************* MARK: - Configuration
     
     func configure(vm: ___VARIABLE_BASENAME___CellViewModel) {
-        // TODO:
-//        <#name#>.<#text#> = vm.<#text#>
-//        <#name#>.<#text#> = vm.<#text#>
-//        <#name#>.<#text#> = vm.<#text#>
-//        <#name#>.<#text#> = vm.<#text#>
+        
     }
 }
 

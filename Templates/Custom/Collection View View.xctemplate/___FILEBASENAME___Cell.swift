@@ -16,13 +16,6 @@ final class ___FILEBASENAME___: CollectionViewCell {
     
     // ******************************* MARK: - @IBOutlets
     
-    // TODO:
-//    @IBOutlet private weak var <#name#>: <#class#>!
-//    @IBOutlet private weak var <#name#>: <#class#>!
-//    @IBOutlet private weak var <#name#>: <#class#>!
-//    @IBOutlet private weak var <#name#>: <#class#>!
-//    @IBOutlet private weak var <#name#>: <#class#>!
-    
     // ******************************* MARK: - Private Properties
     
     private var vm: ___VARIABLE_BASENAME___CellViewModel!
@@ -43,11 +36,6 @@ final class ___FILEBASENAME___: CollectionViewCell {
     func configure(vm: ___VARIABLE_BASENAME___CellViewModel) {
         self.vm = vm
         
-        // TODO:
-//        <#name#>.<#text#> = vm.<#title#>
-//        <#name#>.<#text#> = vm.<#title#>
-//        <#name#>.<#text#> = vm.<#title#>
-//        <#name#>.<#text#> = vm.<#title#>
-//        <#name#>.<#text#> = vm.<#title#>
+        
     }
 }
