@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 extension ___VARIABLE_BASENAME___ {
     
 }

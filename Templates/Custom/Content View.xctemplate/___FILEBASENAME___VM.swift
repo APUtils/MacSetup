@@ -6,10 +6,8 @@
 //  ___COPYRIGHT___
 //
 
-import Foundation
-
 import APExtensions
-
+import Foundation
 
 struct ___FILEBASENAME___ {
     

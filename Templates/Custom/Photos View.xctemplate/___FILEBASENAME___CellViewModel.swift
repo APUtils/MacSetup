@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct ___FILEBASENAME___ {
     let photo: URL
 }

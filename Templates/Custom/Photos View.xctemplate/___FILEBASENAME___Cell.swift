@@ -6,10 +6,8 @@
 //  ___COPYRIGHT___
 //
 
-import UIKit
-
 import BaseClasses
-
+import UIKit
 
 final class ___FILEBASENAME___: CollectionViewCell {
     

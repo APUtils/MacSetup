@@ -6,9 +6,8 @@
 //  ___COPYRIGHT___
 //
 
-import UIKit
 import APExtensions
-
+import UIKit
 
 final class ___FILEBASENAME___: UIView {
     

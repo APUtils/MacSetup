@@ -6,10 +6,8 @@
 //  ___COPYRIGHT___
 //
 
-import UIKit
-
 import APExtensions
-
+import UIKit
 
 struct ___FILEBASENAME___ {
     
