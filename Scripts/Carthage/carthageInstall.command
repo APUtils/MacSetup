@@ -5,7 +5,7 @@
 # Any subsequent(*) commands which fail will cause the shell script to exit immediately
 set -e
 
-declare -a tests_frameworks=("github \"Quick\/Nimble\"" "github \"Quick\/Quick\"")
+declare -a tests_frameworks=("github \"Quick\/Nimble\"" "github \"Quick\/Quick\"" "github \"uber\/ios-snapshot-test-case\"" "github \"ashfurrow\/Nimble-Snapshots\"")
 
 disableTestsFramework() {
     previous_cartfile=`cat "Cartfile.resolved"`
