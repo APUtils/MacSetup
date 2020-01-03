@@ -3,6 +3,9 @@
 # Assume scripts are placed in /Scripts/Cocoapods dir
 base_dir=$(dirname "$0")
 cd "$base_dir"
+
+. utils
+
 cd ..
 cd ..
 
@@ -31,3 +34,6 @@ else
     # Trigger specific or all pod update
     pod update $pod_name
 fi
+
+echo "Fixing warnings"
+fixWarnings

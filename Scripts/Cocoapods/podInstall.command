@@ -3,6 +3,9 @@
 # Assume scripts are placed in /Scripts/Cocoapods dir
 base_dir=$(dirname "$0")
 cd "$base_dir"
+
+. utils
+
 cd ..
 cd ..
 
@@ -14,3 +17,6 @@ if [ $? -eq 31 ]; then
     pod repo update
     pod install
 fi
+
+echo "Fixing warnings"
+fixWarnings
