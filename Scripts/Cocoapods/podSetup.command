@@ -32,8 +32,8 @@ if ! $(grep -q -F 'pods_project.new_file "../Scripts/Cocoapods/podInstall.comman
         printf "\npost_install do |installer|\n    # Add podInstall.command and podUpdate.command shell scripts to Pods project\n    pods_project = installer.pods_project\n    pods_project.new_file \"../Scripts/Cocoapods/podInstall.command\"\n    pods_project.new_file \"../Scripts/Cocoapods/podUpdate.command\"\nend\n" >> "Podfile"
     else
         # Need to update post_install phase
-    printf >&2 "\n${yellow_color}Your Podfile already have \'post_install\' phase. You have to manually add those lines:${no_color}\n"
-    printf "post_install do |installer|\n    # Add podInstall.command and podUpdate.command shell scripts to Pods project\n    pods_project = installer.pods_project\n    pods_project.new_file \"../Scripts/Cocoapods/podInstall.command\"\n    pods_project.new_file \"../Scripts/Cocoapods/podUpdate.command\"\nend\n\n"
+	    printf >&2 "\n${yellow_color}Your Podfile already have \'post_install\' phase. You have to manually add those lines:${no_color}\n"
+	    printf "post_install do |installer|\n    # Add podInstall.command and podUpdate.command shell scripts to Pods project\n    pods_project = installer.pods_project\n    pods_project.new_file \"../Scripts/Cocoapods/podInstall.command\"\n    pods_project.new_file \"../Scripts/Cocoapods/podUpdate.command\"\nend\n\n"
     fi
 fi
 
@@ -44,6 +44,8 @@ if ! grep -q -F "Pods/" ".gitignore"; then
 elif ! grep -q -F "/Pods/" ".gitignore"; then
     sed -i '' 's/Pods\//\/Pods\//g' ".gitignore"
 fi
+
+bash "Scripts/Cocoapods/podInstall.command"
 
 # Success
 printf >&2 "\n${bold_text}PROJECT SETUP SUCCESS${normal_text}\n\n"
