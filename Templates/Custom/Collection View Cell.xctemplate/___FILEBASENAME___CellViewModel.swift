@@ -3,7 +3,7 @@
 //  ___PROJECTNAME___
 //
 //  Created by Anton Plebanovich on ___DATE___.
-//  ___COPYRIGHT___
+//  Copyright © ___YEAR___ Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
