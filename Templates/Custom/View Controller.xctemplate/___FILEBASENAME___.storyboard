@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--___FILEBASENAME___ View Controller-->
+        <!--___FILEBASENAME___VC-->
         <scene sceneID="XdZ-jQ-xOI">
             <objects>
                 <viewController storyboardIdentifier="___FILEBASENAME___VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Sp-cS-saY" customClass="___FILEBASENAME___VC" customModule="___PROJECTNAME___" customModuleProvider="target" sceneMemberID="viewController">

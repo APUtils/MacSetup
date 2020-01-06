@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--___FILEBASENAME___ View Controller-->
+        <!--___FILEBASENAME___VC-->
         <scene sceneID="xhn-q6-Rep">
             <objects>
-                <viewController storyboardIdentifier="___FILEBASENAME___VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h3f-Zv-HwD" customClass="___FILEBASENAME___ViewController" customModule="___PROJECTNAME___" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="___FILEBASENAME___VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h3f-Zv-HwD" customClass="___FILEBASENAME___VC" customModule="___PROJECTNAME___" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vcS-Yc-fVT"/>
                         <viewControllerLayoutGuide type="bottom" id="REM-QD-S0i"/>
