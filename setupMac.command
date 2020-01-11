@@ -6,7 +6,8 @@ green_color='\033[0;32m'
 blue_color='\033[0;34m'
 no_color='\033[0m'
 
-if [ "$(id -un)" != "antonplebanovich" || "$(id -un)" != "anton.plebanovich" ]; then
+idun=$(id -un)
+if [ "${idun}" != "antonplebanovich" ] && [ "${idun}" != "anton.plebanovich" ]; then
     printf >&2 "\n${red_color}This script may replace your custom Xcode templates, snippets and key bindings. Please use it only if you know what you are doing. You should edit script to remove this warning.${no_color}\n\n"
     exit 1
 fi
