@@ -67,7 +67,7 @@ extension ___FILEBASENAME___: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellVM = vm.cellVMs[indexPath.row]
-        let cell: ___VARIABLE_BASENAME___Cell = tableView.dequeue(for: indexPath)
+        let cell = tableView.dequeue(___VARIABLE_BASENAME___Cell.self, for: indexPath)
         cell.configure(vm: cellVM)
         return cell
     }
