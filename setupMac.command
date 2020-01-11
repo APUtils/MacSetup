@@ -26,7 +26,11 @@ cp -R "Keyboard Layouts/" "$folder"
 echo "Setup templates..."
 folder=~/Library/Developer/Xcode/Templates/Custom
 mkdir -p "$folder"
-cp -R "Templates/Custom/" "$folder"
+for directory in Templates/Custom/*/ ; do
+	directory_name="$(basename ${directory})"
+	rm -rf "${folder}/${directory_name}"
+	cp -R "${directory}" "${folder}/${directory_name}"
+done
 
 echo "Setup Xcode color schemes..."
 folder=~/Library/Developer/Xcode/UserData/FontAndColorThemes/
