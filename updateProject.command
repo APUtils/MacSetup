@@ -29,6 +29,6 @@ if [ -z "$project_path" ]; then
 fi
 
 echo "Updating project scripts..."
-cp -R "Scripts" "$project_path"
+cp -R "ProjectScripts/" "$project_path/Scripts/"
 
 printf >&2 "\n${bold_text}SUCCESSFULLY UPDATED SCRIPTS${normal_text}\n\n"
