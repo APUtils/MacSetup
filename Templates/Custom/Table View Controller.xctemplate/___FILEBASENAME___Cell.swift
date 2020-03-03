@@ -10,7 +10,7 @@ import APExtensions
 import BaseClasses
 import UIKit
 
-final class ___FILEBASENAME___: TableViewCell {
+final class ___FILEBASENAME___: TableViewCell, InstantiatableFromXib {
     
     // ******************************* MARK: - @IBOutlets
     
