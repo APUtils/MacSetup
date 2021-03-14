@@ -27,7 +27,7 @@ echo "Setup templates..."
 folder=~/Library/Developer/Xcode/Templates/Custom
 mkdir -p "$folder"
 for directory in Templates/Custom/*/ ; do
-	directory_name="$(basename ${directory})"
+	directory_name=$(basename "${directory}")
 	rm -rf "${folder}/${directory_name}"
 	cp -R "${directory}" "${folder}/${directory_name}"
 done

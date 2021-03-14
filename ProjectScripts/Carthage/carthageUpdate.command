@@ -47,7 +47,6 @@ carthage update ${framework_name} --platform iOS --cache-builds --use-ssh
 echo ""
 
 # Update md5 check sum
-# Update md5 check sum
 cartSum=`{ cat Cartfile.resolved; xcrun swift -version; } | md5`
 cart_sum_file='Carthage/cartSum.txt'
 if [ -f "${cart_sum_file}" ]; then

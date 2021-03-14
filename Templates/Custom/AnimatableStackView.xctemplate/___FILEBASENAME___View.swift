@@ -6,11 +6,12 @@
 //  Copyright © ___YEAR___ Anton Plebanovich. All rights reserved.
 //
 
+import AnimatableStackView
 import APExtensions
 import APPropertyWrappers
 import UIKit
 
-final class ___FILEBASENAME___: UIView {
+final class ___FILEBASENAME___: UIView, InstantiatableFromXib {
     
     // ******************************* MARK: - @IBOutlets
     
@@ -20,11 +21,11 @@ final class ___FILEBASENAME___: UIView {
     
     // ******************************* MARK: - Initialization and Setup
     
-    private func setup() {
-        
-    }
-    
     // ******************************* MARK: - Configuration
+    
+    fileprivate func configure(vm: ___VARIABLE_BASENAME___VM) {
+        self.vm = vm
+    }
     
     // ******************************* MARK: - UIView Overrides
     
@@ -33,14 +34,15 @@ final class ___FILEBASENAME___: UIView {
     // ******************************* MARK: - Private Methods
 }
 
-// ******************************* MARK: - InstantiatableFromXib
+// ******************************* MARK: - AnimatableStackView_Subview
 
-extension ___FILEBASENAME___: InstantiatableFromXib {
-    static func create(vm: ___VARIABLE_BASENAME___VM) -> Self {
-        let view = instantiateFromXib()
-        view.vm = vm
-        view.setup()
-        
-        return view
+extension ___FILEBASENAME___: AnimatableStackView_Subview {
+    
+    func configure(viewModel: Any) {
+        guard let vm = viewModel as? ___VARIABLE_BASENAME___VM else { return }
+        configure(vm: vm)
     }
+    
+    var id: String { vm.id }
 }
+
