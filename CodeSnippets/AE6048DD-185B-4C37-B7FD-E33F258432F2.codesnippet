@@ -3,21 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swiftLintDisable</string>
+	<string>rxcompatiblegeneric</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// swiftlint:disable:next &lt;#rule_name#&gt;</string>
+	<string>// ******************************* MARK: - Rx
+
+extension &lt;#ClassType#&gt; {
+    struct Rx { let base: &lt;#ClassType#&gt;&lt;T&gt; }
+    var rx: Rx { Rx(base: self) }
+}
+
+
+extension &lt;#ClassType#&gt;.Rx {
+    var &lt;#property#&gt;: Observable&lt;&lt;#Type#&gt;&gt; { base.$&lt;#property#&gt;.asObservable() }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D27EF89A-0C53-41EF-B8BC-978191D75081</string>
+	<string>AE6048DD-185B-4C37-B7FD-E33F258432F2</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift Lint Disable Rule</string>
+	<string>Rx Generic</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,21 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swiftLintDisable</string>
+	<string>rxcompatible</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// swiftlint:disable:next &lt;#rule_name#&gt;</string>
+	<string>// ******************************* MARK: - Rx
+
+extension &lt;#ClassType#&gt;: ReactiveCompatible {}
+
+extension Reactive where Base: &lt;#ClassType#&gt; {
+    
+    var &lt;#property#&gt;: Observable&lt;&lt;#Type#&gt;&gt; {
+        base.$&lt;#property#&gt;.asObservable()
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D27EF89A-0C53-41EF-B8BC-978191D75081</string>
+	<string>A2D1A516-F11C-4D40-88A8-2C8061C944C2</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift Lint Disable Rule</string>
+	<string>Rx Extension</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
