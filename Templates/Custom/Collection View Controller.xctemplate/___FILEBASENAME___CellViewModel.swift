@@ -9,9 +9,9 @@
 import APExtensions
 import UIKit
 
-struct ___FILEBASENAME___ {
+final class ___FILEBASENAME___ {
     
-    // ******************************* MARK: - Public Properties
+    // ******************************* MARK: - Properties
     
     
 }

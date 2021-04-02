@@ -11,7 +11,7 @@ import Foundation
 
 struct ___FILEBASENAME___ {
     
-    // ******************************* MARK: - Public Properties
+    // ******************************* MARK: - Properties
     
     // ******************************* MARK: - Initialization and Setup
     

@@ -11,7 +11,7 @@ import APExtensions
 import APPropertyWrappers
 import UIKit
 
-final class ___FILEBASENAME___: UIViewController {
+final class ___FILEBASENAME___: ViewController {
     
     // ******************************* MARK: - @IBOutlets
     

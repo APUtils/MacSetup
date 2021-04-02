@@ -12,7 +12,7 @@ import Foundation
 
 struct ___FILEBASENAME___ {
     
-    // ******************************* MARK: - Public Properties
+    // ******************************* MARK: - Properties
     
     // ******************************* MARK: - Initialization and Setup
     
@@ -26,7 +26,5 @@ extension ___FILEBASENAME___: AnimatableStackView_ViewModel {
     
     var animatableStackViewClass: AnimatableStackView_Subview.Type { ___VARIABLE_BASENAME___View.self }
     
-    // TODO:
     var id: String { "___FILEBASENAME___" }
 }
-

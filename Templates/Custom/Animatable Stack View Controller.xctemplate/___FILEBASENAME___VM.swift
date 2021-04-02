@@ -6,12 +6,15 @@
 //  Copyright © ___YEAR___ Anton Plebanovich. All rights reserved.
 //
 
+import AnimatableStackView
 import APExtensions
 import Foundation
 
-struct ___FILEBASENAME___ {
+final class ___FILEBASENAME___ {
     
-    // ******************************* MARK: - Public Properties
+    // ******************************* MARK: - Properties
+    
+    let vms: [AnimatableStackView_ViewModel] = []
     
     // ******************************* MARK: - Initialization and Setup
     

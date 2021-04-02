@@ -10,7 +10,7 @@ import UIKit
 
 struct ___FILEBASENAME___ {
     
-    // ******************************* MARK: - Public Properties
+    // ******************************* MARK: - Properties
     
     
 }

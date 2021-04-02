@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct ___FILEBASENAME___ {
+final class ___FILEBASENAME___ {
     
-    // ******************************* MARK: - Public Properties
+    // ******************************* MARK: - Properties
     
     let cellVMs: [___VARIABLE_BASENAME___CellVM]
     

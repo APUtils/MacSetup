@@ -10,7 +10,7 @@ import Foundation
 
 struct ___FILEBASENAME___ {
     
-    // ******************************* MARK: - Public Properties
+    // ******************************* MARK: - Properties
     
     let cellVMs: [___VARIABLE_BASENAME___CellViewModel]
     
