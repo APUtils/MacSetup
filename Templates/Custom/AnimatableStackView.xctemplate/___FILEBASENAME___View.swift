@@ -17,14 +17,14 @@ final class ___FILEBASENAME___: UIView, InstantiatableFromXib {
     
     // ******************************* MARK: - Private Properties
     
-    @LateInitialized private var vm: ___VARIABLE_BASENAME___VM
+    fileprivate var _id: String = ""
     
     // ******************************* MARK: - Initialization and Setup
     
     // ******************************* MARK: - Configuration
     
     fileprivate func configure(vm: ___VARIABLE_BASENAME___VM) {
-        self.vm = vm
+        _id = vm.id
     }
     
     // ******************************* MARK: - UIView Overrides
