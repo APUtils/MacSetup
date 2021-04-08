@@ -31,6 +31,8 @@ final class ___FILEBASENAME___: UIView {
     // ******************************* MARK: - Public Methods
     
     // ******************************* MARK: - Private Methods
+    
+    // ******************************* MARK: - Actions
 }
 
 // ******************************* MARK: - InstantiatableFromXib

@@ -24,6 +24,8 @@ final class ___FILEBASENAME___: TableViewCell {
     private func setup() {
         
     }
+    
+    // ******************************* MARK: - Actions
 }
 
 // ******************************* MARK: - Configurable

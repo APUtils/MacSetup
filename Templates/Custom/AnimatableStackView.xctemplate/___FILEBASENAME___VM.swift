@@ -19,12 +19,12 @@ struct ___FILEBASENAME___ {
     init() {
         
     }
+    
+    // ******************************* MARK: - Methods
 }
 // ******************************* MARK: - AnimatableStackView_ViewModel
 
 extension ___FILEBASENAME___: AnimatableStackView_ViewModel {
-    
     var animatableStackViewClass: AnimatableStackView_Subview.Type { ___VARIABLE_BASENAME___View.self }
-    
     var id: String { "___FILEBASENAME___" }
 }

@@ -32,6 +32,8 @@ final class ___FILEBASENAME___: UIView, InstantiatableFromXib {
     // ******************************* MARK: - Public Methods
     
     // ******************************* MARK: - Private Methods
+    
+    // ******************************* MARK: - Actions
 }
 
 // ******************************* MARK: - AnimatableStackView_Subview
@@ -43,6 +45,5 @@ extension ___FILEBASENAME___: AnimatableStackView_Subview {
         configure(vm: vm)
     }
     
-    var id: String { vm.id }
+    var id: String { _id }
 }
-

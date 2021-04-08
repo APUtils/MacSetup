@@ -36,4 +36,6 @@ final class ___FILEBASENAME___: CollectionViewCell {
         
         
     }
+    
+    // ******************************* MARK: - Actions
 }

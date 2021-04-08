@@ -30,5 +30,7 @@ final class ___FILEBASENAME___: TableViewCell {
     func configure(vm: ___VARIABLE_BASENAME___CellViewModel) {
         
     }
+    
+    // ******************************* MARK: - Actions
 }
 

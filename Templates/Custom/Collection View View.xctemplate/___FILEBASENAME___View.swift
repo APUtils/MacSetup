@@ -52,6 +52,8 @@ final class ___FILEBASENAME___: UIView {
     }
     
     // ******************************* MARK: - Private Methods
+    
+    // ******************************* MARK: - Actions
 }
 
 // ******************************* MARK: - InstantiatableContentView

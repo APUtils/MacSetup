@@ -31,4 +31,6 @@ final class ___FILEBASENAME___: TableViewCell, InstantiatableFromXib {
     func configure(vm: ___VARIABLE_BASENAME___CellVM) {
         
     }
+    
+    // ******************************* MARK: - Actions
 }

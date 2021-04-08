@@ -24,6 +24,8 @@ final class ___FILEBASENAME___: CollectionViewCell {
     private func setup() {
         
     }
+    
+    // ******************************* MARK: - Actions
 }
 
 // ******************************* MARK: - Configurable

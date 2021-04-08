@@ -20,4 +20,6 @@ final class ___FILEBASENAME___: CollectionViewCell {
     func configure(vm: ___VARIABLE_BASENAME___CellViewModel) {
         imageView.setImage(url: vm.photo)
     }
+    
+    // ******************************* MARK: - Actions
 }

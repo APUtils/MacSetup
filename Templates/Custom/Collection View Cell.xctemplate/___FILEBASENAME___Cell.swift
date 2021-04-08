@@ -18,4 +18,6 @@ final class ___FILEBASENAME___: CollectionViewCell {
     func configure(model: ___VARIABLE_BASENAME___CellViewModel) {
         
     }
+    
+    // ******************************* MARK: - Actions
 }

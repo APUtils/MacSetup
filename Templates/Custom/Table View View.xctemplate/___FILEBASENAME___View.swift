@@ -53,6 +53,8 @@ final class ___FILEBASENAME___: UIView {
     // ******************************* MARK: - UIView Overrides
     
     // ******************************* MARK: - Private Methods
+    
+    // ******************************* MARK: - Actions
 }
 
 // ******************************* MARK: - InstantiatableContentView
