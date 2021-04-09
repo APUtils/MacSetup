@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let date = Date()
-NSLog("******** %f", Date().timeIntervalSince(date))</string>
+print("******** %f", Date().timeIntervalSince(date))</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A6C8E08D-9827-4DA3-8E58-A7A83A8D7C71</string>
 	<key>IDECodeSnippetLanguage</key>
