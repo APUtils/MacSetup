@@ -29,7 +29,7 @@ final class ___FILEBASENAME___: ViewController {
     }
     
     private func setup() {
-        
+        stackView.update(viewModels: vm.vms, postLayout: false)
     }
     
     // ******************************* MARK: - UIViewController Overrides

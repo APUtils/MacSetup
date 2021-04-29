@@ -14,10 +14,12 @@ struct ___FILEBASENAME___ {
     
     // ******************************* MARK: - Properties
     
+    let title: String
+    
     // ******************************* MARK: - Initialization and Setup
     
-    init() {
-        
+    init(title: String) {
+        self.title = title
     }
     
     // ******************************* MARK: - Methods
@@ -26,5 +28,5 @@ struct ___FILEBASENAME___ {
 
 extension ___FILEBASENAME___: AnimatableStackView_ViewModel {
     var animatableStackViewClass: AnimatableStackView_Subview.Type { ___VARIABLE_BASENAME___View.self }
-    var id: String { "___FILEBASENAME___" }
+    var id: String { title }
 }
