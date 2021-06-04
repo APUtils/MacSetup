@@ -27,12 +27,12 @@ echo ""
 read -p "Which pod to update? Press enter to update all: " pod_name
 
 # Check if pod has git repository attached
-if grep -cq "\- ${pod_name}.*(from " Podfile.lock; then
+if [ -n "${pod_name}" ] && grep -cq "\- ${pod_name}.*(from " Podfile.lock; then
     # Pod has git repository attached. No need to fetch pods repo.
-    pod update $pod_name --no-repo-update
+    pod update ${pod_name} --no-repo-update
 else
     # Trigger specific or all pod update
-    pod update $pod_name
+    pod update ${pod_name}
 fi
 
 echo "Fixing warnings"

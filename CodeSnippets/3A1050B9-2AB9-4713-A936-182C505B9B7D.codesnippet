@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>start</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    // ******************************* MARK: - Start
+    
+    fileprivate var started = false
+    
+    func start() {
+        if started {
+            logError("Double start")
+            return
+        } else {
+            started = true
+        }
+        
+        
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3A1050B9-2AB9-4713-A936-182C505B9B7D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Start Template</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Start</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
