@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@IBOutlet private var &lt;#name#&gt;: &lt;#class#&gt;!</string>
+	<string>@IBOutlet fileprivate var &lt;#name#&gt;: &lt;#class#&gt;!</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>45CCFD0E-303B-4F09-AA6A-1DE770568BD8</string>
 	<key>IDECodeSnippetLanguage</key>

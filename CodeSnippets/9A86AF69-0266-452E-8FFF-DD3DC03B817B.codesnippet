@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@IBAction private func on&lt;#action#&gt;Tap(_ sender: Any) {
+	<string>@IBAction fileprivate func on&lt;#action#&gt;Tap(_ sender: Any) {
     &lt;#code#&gt;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
