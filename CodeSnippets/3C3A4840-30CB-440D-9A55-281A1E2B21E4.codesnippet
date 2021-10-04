@@ -6,14 +6,16 @@
 	<string>colorLiteral</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>3C3A4840-30CB-440D-9A55-281A1E2B21E4</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Color Literal</string>
 	<key>IDECodeSnippetUserSnippet</key>

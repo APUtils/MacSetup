@@ -6,7 +6,7 @@
 	<string>blockNotification</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>var token: NSObjectProtocol!
@@ -17,7 +17,9 @@ token = NotificationCenter.default.addObserver(forName: &lt;#T##NSNotification.N
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CE68752E-2DDB-4368-9E91-11D0619ADA98</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Block Notification</string>
 	<key>IDECodeSnippetUserSnippet</key>

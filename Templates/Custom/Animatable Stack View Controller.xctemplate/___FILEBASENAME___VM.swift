@@ -10,7 +10,7 @@ import AnimatableStackView
 import APExtensions
 import Foundation
 
-final class ___FILEBASENAME___ {
+final class ___FILEBASENAME___: ClassName {
     
     // ******************************* MARK: - Properties
     
@@ -20,5 +20,9 @@ final class ___FILEBASENAME___ {
     
     init() {
         
+    }
+    
+    deinit {
+        logDebug("Deinit \(className)")
     }
 }
