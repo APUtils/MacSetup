@@ -16,6 +16,7 @@ final class ___FILEBASENAME___: ViewController {
     
     // ******************************* MARK: - @IBOutlets
     
+    @IBOutlet fileprivate var scrollView: UIScrollView!
     @IBOutlet private var animatableView: AnimatableView!
     
     // ******************************* MARK: - Private Properties

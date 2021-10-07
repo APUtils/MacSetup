@@ -33,6 +33,9 @@
                                     <constraint firstItem="2Fy-Ei-MMA" firstAttribute="width" secondItem="0pp-YN-NQc" secondAttribute="width" id="bQn-sC-gRB"/>
                                     <constraint firstItem="2Fy-Ei-MMA" firstAttribute="top" secondItem="0pp-YN-NQc" secondAttribute="top" id="dyR-HU-LWm"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="flashScrollIndicatorsOnViewDidAppear" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,6 +52,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="animatableView" destination="2Fy-Ei-MMA" id="sZ1-YG-YdC"/>
+                        <outlet property="scrollView" destination="0pp-YN-NQc" id="v1n-7R-f8Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9A-lW-vmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
