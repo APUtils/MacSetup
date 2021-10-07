@@ -5,9 +5,9 @@
 	<key>Kind</key>
 	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
 	<key>Description</key>
-	<string>Animatable stack view</string>
+	<string>Animatable universal view</string>
 	<key>Summary</key>
-	<string>Creates animatable stack view</string>
+	<string>Creates animatable universal view</string>
 	<key>SortOrder</key>
 	<string>4</string>
 	<key>AllowedTypes</key>

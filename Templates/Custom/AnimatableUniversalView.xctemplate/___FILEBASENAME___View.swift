@@ -15,16 +15,20 @@ final class ___FILEBASENAME___: UIView, InstantiatableFromXib {
     
     // ******************************* MARK: - @IBOutlets
     
+    @IBOutlet fileprivate var titleLabel: UILabel!
+    
     // ******************************* MARK: - Private Properties
     
-    fileprivate var _id: String = ""
+    @LateInitialized fileprivate var vm: ___VARIABLE_BASENAME___VM
     
     // ******************************* MARK: - Initialization and Setup
     
     // ******************************* MARK: - Configuration
     
     fileprivate func configure(vm: ___VARIABLE_BASENAME___VM) {
-        _id = vm.id
+        self.vm = vm
+        
+        titleLabel.text = vm.title
     }
     
     // ******************************* MARK: - UIView Overrides
@@ -38,12 +42,23 @@ final class ___FILEBASENAME___: UIView, InstantiatableFromXib {
 
 // ******************************* MARK: - AnimatableStackView_Subview
 
-extension ___FILEBASENAME___: AnimatableStackView_Subview {
-    
+// ******************************* MARK: - AnimatableView_Subview
+
+extension ___FILEBASENAME___: AnimatableView_Subview {
+    var animatableViewModel: Any? { vm }
+    var id: String { vm.id }
+
     func configure(viewModel: Any) {
         guard let vm = viewModel as? ___VARIABLE_BASENAME___VM else { return }
         configure(vm: vm)
     }
-    
-    var id: String { _id }
+}
+
+// ******************************* MARK: - AnimatableStackView_Subview
+
+extension ___FILEBASENAME___: AnimatableStackView_Subview {
+    func configure(viewModel: Any) {
+        guard let vm = viewModel as? ___VARIABLE_BASENAME___VM else { return }
+        configure(vm: vm)
+    }
 }
