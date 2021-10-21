@@ -26,7 +26,7 @@ set -e
 # Check if repo needs update
 # * `31` Spec not found (i.e out-of-date source repos, mistyped Pod name etc...)
 echo "Exit code: ${exit_code}"
-if [ ${exit_code} -eq 31 ]; then
+if [ ${exit_code} -eq 31 ] || [ ${exit_code} -eq 1 ]; then
     echo "Fixing outdated repo"
     pod repo update
     pod_install_output=`script -q /dev/null pod install | tee /dev/fd/5`
