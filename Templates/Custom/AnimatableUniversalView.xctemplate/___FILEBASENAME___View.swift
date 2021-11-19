@@ -46,22 +46,21 @@ extension ___FILEBASENAME___: Identifiable {
     var id: String { vm.id }
 }
 
+// ******************************* MARK: - ConfigurableWithViewModel
+
+extension ___FILEBASENAME___: ConfigurableWithViewModel {
+    func configure(viewModel: Any) {
+        guard let vm = viewModel as? StockDetailsBottomBarVM else { return }
+        configure(vm: vm)
+    }
+}
+
 // ******************************* MARK: - AnimatableView_Subview
 
 extension ___FILEBASENAME___: AnimatableView_Subview {
     var animatableViewModel: Any? { vm }
-
-    func configure(viewModel: Any) {
-        guard let vm = viewModel as? ___VARIABLE_BASENAME___VM else { return }
-        configure(vm: vm)
-    }
 }
 
 // ******************************* MARK: - AnimatableStackView_Subview
 
-extension ___FILEBASENAME___: AnimatableStackView_Subview {
-    func configure(viewModel: Any) {
-        guard let vm = viewModel as? ___VARIABLE_BASENAME___VM else { return }
-        configure(vm: vm)
-    }
-}
+extension ___FILEBASENAME___: AnimatableStackView_Subview {}
