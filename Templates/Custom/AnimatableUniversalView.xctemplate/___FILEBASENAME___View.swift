@@ -40,11 +40,16 @@ final class ___FILEBASENAME___: UIView, InstantiatableFromXib {
     // ******************************* MARK: - Actions
 }
 
+// ******************************* MARK: - Identifiable
+
+extension ___FILEBASENAME___: Identifiable {
+    var id: String { vm.id }
+}
+
 // ******************************* MARK: - AnimatableView_Subview
 
 extension ___FILEBASENAME___: AnimatableView_Subview {
     var animatableViewModel: Any? { vm }
-    var id: String { vm.id }
 
     func configure(viewModel: Any) {
         guard let vm = viewModel as? ___VARIABLE_BASENAME___VM else { return }
@@ -55,8 +60,6 @@ extension ___FILEBASENAME___: AnimatableView_Subview {
 // ******************************* MARK: - AnimatableStackView_Subview
 
 extension ___FILEBASENAME___: AnimatableStackView_Subview {
-    var id: String { vm.id }
-    
     func configure(viewModel: Any) {
         guard let vm = viewModel as? ___VARIABLE_BASENAME___VM else { return }
         configure(vm: vm)

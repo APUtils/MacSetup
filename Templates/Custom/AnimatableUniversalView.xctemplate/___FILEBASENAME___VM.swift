@@ -25,16 +25,20 @@ struct ___FILEBASENAME___ {
     // ******************************* MARK: - Methods
 }
 
+// ******************************* MARK: - Identifiable
+
+extension ___FILEBASENAME___: Identifiable {
+    var id: String { title }
+}
+
 // ******************************* MARK: - AnimatableView_ViewModel
 
 extension ___FILEBASENAME___: AnimatableView_ViewModel {
     var animatableViewClass: AnimatableView_Subview.Type { ___VARIABLE_BASENAME___View.self }
-    var id: String { title }
 }
 
 // ******************************* MARK: - AnimatableStackView_ViewModel
 
 extension ___FILEBASENAME___: AnimatableStackView_ViewModel {
     var animatableStackViewClass: AnimatableStackView_Subview.Type { ___VARIABLE_BASENAME___View.self }
-    var id: String { title }
 }
