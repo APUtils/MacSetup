@@ -23,7 +23,7 @@ final class ___FILEBASENAME___: UIView {
     }
     
     private func setup() {
-        createAndAttachContentView()
+        instantiateAndAttachContentView()
     }
     
     // ******************************* MARK: - Configuration
