@@ -50,7 +50,7 @@ extension ___FILEBASENAME___: Identifiable {
 
 extension ___FILEBASENAME___: ConfigurableWithViewModel {
     func configure(viewModel: Any) {
-        guard let vm = viewModel as? StockDetailsBottomBarVM else { return }
+        guard let vm = viewModel as? ___VARIABLE_BASENAME___VM else { return }
         configure(vm: vm)
     }
 }

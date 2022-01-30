@@ -33,9 +33,9 @@ final class ___FILEBASENAME___: ClassName {
 
 // ******************************* MARK: - Rx
 
-extension PortfolioInfoVM: ReactiveCompatible {}
+extension ___FILEBASENAME___: ReactiveCompatible {}
 
-extension Reactive where Base == PortfolioInfoVM {
+extension Reactive where Base == ___FILEBASENAME___ {
     var vms: Driver<[AnimatableView_ViewModel]> {
         base.$vms.asDriver()
     }
