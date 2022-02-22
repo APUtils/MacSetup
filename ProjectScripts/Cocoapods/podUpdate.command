@@ -18,7 +18,7 @@ echo "Pods list:"
 printf '\033[0;34m'
 
 # Pods list
-grep -o "pod \'[a-zA-Z0-9\.\/-]*\'" Podfile | sed -e "s/^pod \'//" -e "s/\'$//" | sort -fu
+grep -v "# *pod" Podfile | grep -o "pod \'[a-zA-Z0-9\.\/-]*\'" | sed -e "s/^pod \'//" -e "s/'$//" -e "s/\/.*//" | sort -fu
 
 # No color
 printf '\033[0m'
