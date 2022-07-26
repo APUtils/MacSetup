@@ -6,10 +6,11 @@
 //  Copyright © ___YEAR___ Anton Plebanovich. All rights reserved.
 //
 
+import APControllers
 import APExtensions
 import UIKit
 
-final class ___FILEBASENAME___: UIViewController {
+final class ___FILEBASENAME___: ViewController {
     
     // ******************************* MARK: - @IBOutlets
     
@@ -32,8 +33,7 @@ final class ___FILEBASENAME___: UIViewController {
     
     private func setupTableView() {
         tableView.registerNib(class: ___VARIABLE_BASENAME___Cell.self)
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.handleEstimatedSizeAutomatically = true
     }
     
     // ******************************* MARK: - UIViewController Overrides
@@ -52,7 +52,7 @@ final class ___FILEBASENAME___: UIViewController {
 
 extension ___FILEBASENAME___: InstantiatableFromStoryboard {
     static func create(vm: ___VARIABLE_BASENAME___VM) -> Self {
-        let vc = create()
+        let vc = instantiateFromStoryboard()
         vc.vm = vm
         return vc
     }
