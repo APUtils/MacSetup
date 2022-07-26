@@ -34,7 +34,10 @@ final class ___FILEBASENAME___: ViewController {
     
     private func setupTableView() {
         tableView.registerNib(class: ___VARIABLE_BASENAME___Cell.self)
-        tableView.handleEstimatedSizeAutomatically = true
+        tableView.optimizeCellHeightComputations(cell: ___VARIABLE_BASENAME___Cell.instantiateFromXib()) { [vm] cell, indexPath in
+            let cellVM = vm.cellVMs[indexPath.row]
+            cell.configure(vm: cellVM)
+        }
     }
     
     // ******************************* MARK: - UIViewController Overrides
