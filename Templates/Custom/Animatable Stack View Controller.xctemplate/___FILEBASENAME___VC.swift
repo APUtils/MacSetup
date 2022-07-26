@@ -32,11 +32,9 @@ final class ___FILEBASENAME___: ViewController {
         stackView.update(viewModels: vm.vms, postLayout: false)
     }
     
-    // ******************************* MARK: - UIViewController Overrides
-    
     // ******************************* MARK: - Actions
     
-    // ******************************* MARK: - Notifications
+    
 }
 
 // ******************************* MARK: - InstantiatableFromStoryboard

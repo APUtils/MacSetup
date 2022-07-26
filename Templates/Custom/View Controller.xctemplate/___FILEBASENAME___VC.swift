@@ -10,9 +10,11 @@ import APExtensions
 import APPropertyWrappers
 import UIKit
 
-final class ___FILEBASENAME___: UIViewController {
+final class ___FILEBASENAME___: ViewController {
     
     // ******************************* MARK: - @IBOutlets
+    
+    @IBOutlet fileprivate var scrollView: UIScrollView!
     
     // ******************************* MARK: - Private Properties
     
@@ -29,11 +31,9 @@ final class ___FILEBASENAME___: UIViewController {
         
     }
     
-    // ******************************* MARK: - UIViewController Overrides
-    
     // ******************************* MARK: - Actions
     
-    // ******************************* MARK: - Notifications
+    
 }
 
 // ******************************* MARK: - InstantiatableFromStoryboard

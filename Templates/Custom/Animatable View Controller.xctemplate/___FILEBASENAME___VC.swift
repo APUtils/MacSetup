@@ -43,11 +43,9 @@ final class ___FILEBASENAME___: ViewController {
             .disposed(by: disposeBag)
     }
     
-    // ******************************* MARK: - UIViewController Overrides
-    
     // ******************************* MARK: - Actions
     
-    // ******************************* MARK: - Notifications
+    
 }
 
 // ******************************* MARK: - InstantiatableFromStoryboard

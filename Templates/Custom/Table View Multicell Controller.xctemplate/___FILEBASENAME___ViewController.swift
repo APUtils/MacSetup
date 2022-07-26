@@ -43,7 +43,7 @@ final class ___FILEBASENAME___: UIViewController {
     
     // ******************************* MARK: - Actions
     
-    // ******************************* MARK: - Notifications
+    
 }
 
 // ******************************* MARK: - InstantiatableFromStoryboard
