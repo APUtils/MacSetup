@@ -6,7 +6,7 @@
 	<string>guardSelf</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>guard let _self = self else { return }</string>
