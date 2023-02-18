@@ -40,7 +40,7 @@ final class ___FILEBASENAME___: ViewController {
 // ******************************* MARK: - InstantiatableFromStoryboard
 
 extension ___FILEBASENAME___: InstantiatableFromStoryboard {
-    static func create(vm: ___VARIABLE_BASENAME___VM) -> ___FILEBASENAME___ {
+    static func instantiateFromStoryboard(vm: ___VARIABLE_BASENAME___VM) -> ___FILEBASENAME___ {
         let vc = instantiateFromStoryboard()
         vc.vm = vm
         return vc

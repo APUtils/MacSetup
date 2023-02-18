@@ -38,7 +38,7 @@ final class ___FILEBASENAME___: UIView {
 // ******************************* MARK: - InstantiatableFromXib
 
 extension ___FILEBASENAME___: InstantiatableFromXib {
-    static func create(vm: ___VARIABLE_BASENAME___VM) -> Self {
+    static func instantiateFromXib(vm: ___VARIABLE_BASENAME___VM) -> Self {
         let view = instantiateFromXib()
         view.vm = vm
         view.setup()
