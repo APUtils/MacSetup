@@ -9,15 +9,15 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>R.string.localizable.</string>
+	<string>R.string.localizable.<#string#>()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CFBAD73B-5338-469F-8C9A-7DCAFA53370E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>R.string.localizable.</string>
+	<string>R.string.localizable.<#string#>()</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>R.string.localizable.</string>
+	<string>R.string.localizable.<#string#>()</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
