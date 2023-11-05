@@ -6,7 +6,7 @@
 //  Copyright © ___YEAR___ Anton Plebanovich. All rights reserved.
 //
 
-import AnimatableStackView
+import AnimatableView
 import APExtensions
 import APPropertyWrappers
 import UIKit
@@ -60,7 +60,3 @@ extension ___FILEBASENAME___: ConfigurableWithViewModel {
 extension ___FILEBASENAME___: AnimatableView_Subview {
     var animatableViewModel: Any? { vm }
 }
-
-// ******************************* MARK: - AnimatableStackView_Subview
-
-extension ___FILEBASENAME___: AnimatableStackView_Subview {}

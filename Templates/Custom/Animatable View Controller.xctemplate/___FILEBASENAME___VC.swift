@@ -6,7 +6,7 @@
 //  Copyright © ___YEAR___ Anton Plebanovich. All rights reserved.
 //
 
-import AnimatableStackView
+import AnimatableView
 import APExtensions
 import APPropertyWrappers
 import RxUtils

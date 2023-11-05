@@ -6,7 +6,7 @@
 //  Copyright © ___YEAR___ Anton Plebanovich. All rights reserved.
 //
 
-import AnimatableStackView
+import AnimatableView
 import APExtensions
 import Foundation
 
@@ -35,10 +35,4 @@ extension ___FILEBASENAME___: Identifiable {
 
 extension ___FILEBASENAME___: AnimatableView_ViewModel {
     var animatableViewClass: AnimatableView_Subview.Type { ___VARIABLE_BASENAME___View.self }
-}
-
-// ******************************* MARK: - AnimatableStackView_ViewModel
-
-extension ___FILEBASENAME___: AnimatableStackView_ViewModel {
-    var animatableStackViewClass: AnimatableStackView_Subview.Type { ___VARIABLE_BASENAME___View.self }
 }
