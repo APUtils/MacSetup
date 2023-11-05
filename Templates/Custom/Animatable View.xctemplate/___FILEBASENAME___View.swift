@@ -19,7 +19,8 @@ final class ___FILEBASENAME___: UIView, InstantiatableFromXib {
     
     // ******************************* MARK: - Private Properties
     
-    @LateInitialized fileprivate var vm: ___VARIABLE_BASENAME___VM
+    @LateInitialized 
+    fileprivate var vm: ___VARIABLE_BASENAME___VM
     
     // ******************************* MARK: - Initialization and Setup
     

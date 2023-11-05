@@ -18,7 +18,8 @@ final class ___FILEBASENAME___: ViewController {
     
     // ******************************* MARK: - Private Properties
     
-    @LateInitialized private var vm: ___VARIABLE_BASENAME___VM
+    @LateInitialized 
+    private var vm: ___VARIABLE_BASENAME___VM
     
     // ******************************* MARK: - Initialization and Setup
     
