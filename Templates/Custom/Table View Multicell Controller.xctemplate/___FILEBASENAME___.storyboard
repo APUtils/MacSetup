@@ -27,7 +27,7 @@
                                 <view key="tableFooterView" contentMode="scaleToFill" id="S1Z-ak-9I2" userLabel="Bogus Footer">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <connections>
                                     <outlet property="dataSource" destination="h3f-Zv-HwD" id="UQq-Yu-IbL"/>
@@ -35,7 +35,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="qwd-rH-dMW" secondAttribute="bottom" id="4Cs-VY-xgQ"/>
                             <constraint firstItem="qwd-rH-dMW" firstAttribute="top" secondItem="A71-5r-y83" secondAttribute="top" id="Ti8-Iz-LYo"/>

@@ -52,7 +52,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="8E9-UO-IkM" secondAttribute="bottom" id="7a3-Hp-GtR"/>
                             <constraint firstItem="8E9-UO-IkM" firstAttribute="top" secondItem="YfS-o8-h7o" secondAttribute="top" id="Xzd-K0-moA"/>

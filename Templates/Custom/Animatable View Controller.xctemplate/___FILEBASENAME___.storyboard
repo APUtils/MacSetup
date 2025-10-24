@@ -38,7 +38,7 @@
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0pp-YN-NQc" firstAttribute="top" secondItem="ufL-yt-nao" secondAttribute="bottom" id="5u9-SN-CsH"/>
                             <constraint firstItem="0pp-YN-NQc" firstAttribute="leading" secondItem="YfS-o8-h7o" secondAttribute="leading" id="Uwg-Gx-ufl"/>
