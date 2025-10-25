@@ -17,6 +17,15 @@ final class ___FILEBASENAME___: UIView {
     
     // ******************************* MARK: - Initialization and Setup
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
